@@ -7,7 +7,7 @@ Use this model to assess the dynamic performance of the BESS connected to the PV
 
 ## Setup
 
-- Clone the repository and add to MATLAB path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
+- Clone the repository and add to MATLAB path, then click the 'RenewableEnergyIntegrationSimscape.prj' file to get started. 
 - In the toolstrip, use the project shortcut buttons to load the model.
 - This project requires MATLAB&reg; R2022b or later.
 
