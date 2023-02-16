@@ -5,6 +5,8 @@ This repository provides design solutions for the operation of power systems wit
 This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV). 
 Use this model to assess the dynamic performance of the BESS connected to the PV plant during normal operation and contingencies, such as a large drop in PV power, significant load change, grid outage, and faults. Simulate the model to verify whether the designed PV plant and BESS unit, along with their associated controllers, conform the performance requirements the current IEEE 2800 standards recommend. 
 
+![](ScriptsData/SystemModel.png)
+
 ## Setup
 
 - Clone the repository and add to MATLAB path, then click the 'RenewableEnergyIntegrationSimscape.prj' file to get started. 
