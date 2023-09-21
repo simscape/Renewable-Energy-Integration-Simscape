@@ -217,7 +217,7 @@ Feeder.R_f=0.16;              % Feeder resistance in Ohms per Km
 Feeder.L_f=3.1e-4;            % Feeder inductance in Henry per Km 
 Feeder.lengthFirstHalf=0.05;  % Feeder length in Km 
 Feeder.lengthSecondHalf=0.6;  % Feeder length in Km               
-GridStrength=0;               % Grid Condition 0 for weak grid 1 for strong grid
+GridStrength=1;               % Grid Condition 0 for weak grid 1 for strong grid
 % Sub-transmission Line Parameters
 SubTransmissionLine.R=0.08;     % line resistance in Ohms per Km
 SubTransmissionLine.L=2.1e-4;   % line inductance in Henry per Km
@@ -255,7 +255,7 @@ VSMFrequencyControlledSource =Simulink.Variant(' GridModel == 2 ');
 %% 
 % *BESS Controller Selection*
 %Default mode is VSM controller
-BESSControl=1; %Choose Grid Model 1 for grid forming VSM and 2 for Grid following V and F supporting control
+BESSControl=2; %Choose Grid Model 1 for grid forming VSM and 2 for Grid following V and F supporting control
 BESSVSMControl=Simulink.Variant(' BESSControl == 1 ');
 BESSGridSupporting =Simulink.Variant(' BESSControl == 2 ');
 %% 
