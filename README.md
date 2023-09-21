@@ -28,8 +28,8 @@ Run this model to test whether the designed GFM wind controller helps the wind f
 ![](Pictures/WindFarm.PNG)
 
 In this project you can use two GFM control strategies for type-4 wind turbine generators:
-- G-GFM: GFM control based on DC-link voltage regulation by grid-side converter (GSC).  
-- M-GFM: GFM control using turbine inertia with DC-link voltage control by machine-side converter (MSC). 
+- G-GFM: GFM control based on DC-link voltage regulation by the grid-side converter (GSC).  
+- M-GFM: GFM control using turbine inertia with DC-link voltage control by the machine-side converter (MSC). 
 
 These figures show the general control scheme for the GFM control of wind turbine generators using G-GFM and M-GFM controllers.
 
