@@ -42,7 +42,7 @@ Once the fault clears, the system returns to its pre-fault state in 0.5 sec, whi
 ![](Pictures/MGFMFault.PNG)
 
 ## Setup
-- Clone the repository and add to MATLAB&reg path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
+- Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
 - In the toolstrip, use the project shortcut buttons to load the model.
 - This project requires MATLAB&reg; R2023a or later.
 
