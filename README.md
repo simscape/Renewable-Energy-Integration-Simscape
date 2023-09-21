@@ -25,8 +25,8 @@ Run this model to test whether the designed GFM wind controller helps the wind f
 ![](Pictures/WindFarm.PNG)
 
 In this project you can use two GFM control strategies for type-4 wind turbine generators:
-- GFM control based on DC-link voltage regulation by GSC (G-GFM) 
-- GFM control using turbine inertia with DC-link voltage control by MSC (M-GFM). 
+- G-GFM: GFM control based on DC-link voltage regulation by grid-side converter (GSC).  
+- M-GFM: GFM control using turbine inertia with DC-link voltage control by machine-side converter (MSC). 
 
 These figures show the general control scheme for the GFM control of wind turbine generators using G-GFM and M-GFM controllers.
 
@@ -40,7 +40,7 @@ Once the fault clears, the system returns to its pre-fault state in 0.5 sec, whi
 ![](Pictures/MGFMFault.PNG)
 
 ## Setup
-- Clone the repository and add to MATLAB(R) path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
+- Clone the repository and add to MATLAB&reg path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
 - In the toolstrip, use the project shortcut buttons to load the model.
 - This project requires MATLAB&reg; R2023a or later.
 
