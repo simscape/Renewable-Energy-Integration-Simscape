@@ -1,3 +1,4 @@
+% Copyright 2023 The MathWorks, Inc.
 if(gridCode=="IEEE 2800")
     code.vl=0.9;
     code.vh=1.1;
@@ -12,14 +13,12 @@ if(gridCode=="ERI GRID")
     lvrt.time=[0.15,0.15,0.45,0.45,0.45,inf]; % Trip time vs Volatge (PU)
     lvrt.voltage=[0,0.499,0.5,0.899,0.9,0.901];
 end
-% simIn2 = Simulink.SimulationInput(mdl);
-% simIn2 = setModelParameter(simIn2,"StopTime","2.6");
-% simIn2 = setInitialState(simIn2,Op);
+
 if ~exist('out.simlogWindFarmGFMControl', 'var') || portSetting.scenario~=scenarioNumber||feeder.length~=portSetting.feederlength||...
         pm_simlogNeedsUpdate(simlogWindFarmGFMControl)
     portSetting.scenario=scenarioNumber;
     portSetting.feederlength=feeder.length;
-    out=sim("WindFarmGFMControlFast",'SrcWorkspace','current');
+    out=sim("WindFarmGFMControl",'SrcWorkspace','current');
 end
 % Reuse Voltage and current figures if it exists, else create new figures
 if ~exist('h1simlogWindGFMControlVoltageCurrent', 'var') || ...

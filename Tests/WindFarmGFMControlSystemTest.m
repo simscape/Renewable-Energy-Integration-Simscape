@@ -1,7 +1,7 @@
 classdef WindFarmGFMControlSystemTest < matlab.unittest.TestCase
     % Copyright 2023 The MathWorks, Inc.
     
-    % System level test for WindFarmGFMControlFast.slx 
+    % System level test for WindFarmGFMControl.slx 
     % Test strategy: 
     % Test point 1 : testMPPT This test point checks the maximum power
     % point tracking(MPPT) algorithm for Grid-following(GFL) wind turbines.
@@ -13,7 +13,7 @@ classdef WindFarmGFMControlSystemTest < matlab.unittest.TestCase
     % seconds of clearing the fault.
     
     properties
-        model = 'WindFarmGFMControlFast'
+        model = 'WindFarmGFMControl'
         simIn
     end
 
@@ -22,7 +22,6 @@ classdef WindFarmGFMControlSystemTest < matlab.unittest.TestCase
         % different inputs or scenarios. In this case, this test runs
         % all the test points GFM wind turbine in the below modes
         converterControl = {'VSM Using Turbine Inertia','VSM Using DC Link Voltage'};
-        %converterControl = {'VSM Using DC Link Voltage'};
     end
 
     methods(TestMethodSetup)
@@ -204,21 +203,10 @@ classdef WindFarmGFMControlSystemTest < matlab.unittest.TestCase
 
     methods
         function testCase = setWindConverterType(testCase,converterControl)
-            % This function sets the GFM wind turbine converter type and
-            % loads the initial operating point
-            
+            % This function sets the GFM wind turbine converter type        
             % Set the type of wind turbine converter
             testCase.simIn = setBlockParameter(testCase.simIn,strcat(testCase.model,'/Wind Farm/Wind Turbine (GFM)'),'Control',converterControl);
-            testCase.simIn = setBlockParameter(testCase.simIn,strcat(testCase.model,'/Wind Farm/Wind Turbine (GFM)1'),'Control',converterControl);
-            
-            if strcmp(converterControl,'VSM Using DC Link Voltage')
-                load('opDCVoltageGGFM.mat','op'); %#ok<*NASGU>
-            else
-                load('opTurbineInertiaMGFM.mat','op');
-            end
-            
-            % Set the initial operating point           
-            testCase.simIn = setVariable(testCase.simIn,'op',op);
+            testCase.simIn = setBlockParameter(testCase.simIn,strcat(testCase.model,'/Wind Farm/Wind Turbine (GFM)1'),'Control',converterControl); 
         end
     end
 end

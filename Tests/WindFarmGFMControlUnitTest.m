@@ -6,18 +6,13 @@ classdef WindFarmGFMControlUnitTest < matlab.unittest.TestCase
 
 
 methods (Test)
-
-
-%% Utility > SignalDesigner folder
-
-
 function WindFarmGFMControl_Test_1(~)
  close all
  bdclose all
- WindFarmGFMControlParametersFast
- load_system("WindFarmGFMControlFast.slx")
- set_param("WindFarmGFMControlFast",StopTime = "0.5")
- sim("WindFarmGFMControlFast.slx")
+ WindFarmGFMControlParameters
+ load_system("WindFarmGFMControl.slx")
+ set_param("WindFarmGFMControl",StopTime = "0.5")
+ sim("WindFarmGFMControl.slx")
  close all
  bdclose all
 end
@@ -25,8 +20,8 @@ end
 function WindFarmGFMControl_Test_2(~)
  close all
  bdclose all
- load_system("WindFarmGFMControlFast.slx")
- set_param("WindFarmGFMControlFast",StopTime = "0.5")
+ load_system("WindFarmGFMControl.slx")
+ set_param("WindFarmGFMControl",StopTime = "0.5")
  MWWindFarmwithGridformingControls
  close all
  bdclose all

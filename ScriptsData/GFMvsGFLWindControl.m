@@ -1,3 +1,4 @@
+% Copyright 2023 The MathWorks, Inc.
 %%Grid Code Setting 
 if(gridCode=="IEEE 2800")
     code.vl=0.9;
@@ -44,7 +45,6 @@ WindFarmGFMControlplotCurvevoltagefrequency(out.logsWindGFMControl,scenarioNumbe
 %%With GFM
 mdl='WindFarmGFMControl';
 open_system(mdl);
-%load('turbineInertaRegOp.mat');
 Op=turbineInertaRegulationOp;
 set_param('WindFarmGFMControl/Wind Farm/Wind Tuebine 1(GFM)','Control','VSM Using Turbine Inertia');
 set_param('WindFarmGFMControl/Wind Farm/Wind Tuebine 1(GFM)1','Control','VSM Using Turbine Inertia');

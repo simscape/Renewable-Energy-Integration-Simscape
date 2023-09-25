@@ -1,9 +1,9 @@
 %% Script to run unit tests
 % This script runs tests for component-level and system-level tests.
 % Note that tests for detailed model applications are not run
-% to aoivd long-running tests.
+% to avoid long-running tests.
 
-% Copyright 2021-2023 The MathWorks, Inc.
+% Copyright 2023 The MathWorks, Inc.
 
 relStr = matlabRelease().Release;
 disp("This is MATLAB " + relStr + ".")
@@ -21,14 +21,6 @@ fullfile(topFolder, "Tests", "WindFarmGFMControlUnitTest.m"));
 
 runner = matlab.unittest.TestRunner.withTextOutput( ...
   OutputDetail = matlab.unittest.Verbosity.Detailed);
-
-%% JUnit style test result
-
-% plugin = matlab.unittest.plugins.XMLPlugin.producingJUnitFormat( ...
-%   fullfile(topFolder, "Test", "BEV_TestResults_"+relStr+".xml"));
-% 
-% addPlugin(runner, plugin)
-% 
 %% MATLAB Code Coverage Report
 
 coverageReportFolder = fullfile(topFolder, "coverage" + relStr);
