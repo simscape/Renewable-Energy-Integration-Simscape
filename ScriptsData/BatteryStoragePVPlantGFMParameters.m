@@ -19,7 +19,7 @@ Grid.damping=0.2;         % Grid generator damping ratio 0.13
 Grid.MVA=20e6;            % Grid generator MVA base
 Grid.H=0.6;               % Grid generator inertia in (sec)
 Grid.Pref=0.3;            % Grid generator real power reference 0.1
-Grid.sensor_time=1e-6;    % Speed sensor tim delay in (sec)
+Grid.sensor_time=Ts;    % Speed sensor tim delay in (sec)
 % *Grid Transformer Parameters*
 GridTransformer.lv=24.9e3;                     % Grid transformer lv side L-L voltage in (V)
 GridTransformer.hv=230e3;                      % Grid transformer hv side L-L voltage in (V)
@@ -99,19 +99,24 @@ GFMBatteryController.C_bat=4.5e-6;  % Filter capacitance of Battery inverter
 GFMBatteryController.C_dc=0.5e-4;   % DC bus capacitance of Battery inverter
 GFMBatteryController.V_ref=1;       % Reference Volatge in per-unit
 GFMBatteryController.w_ref=1;       % Reference frequency in per-unit
-GFMBatteryController.Sampletime=5.5e-5;   % Active power measurement filter time constant (sec)
+GFMBatteryController.Sampletime=5e-5;   % Active power measurement filter time constant (sec)
 GFMBatteryController.frequencydroop=0.02; % Droop in per-unit
 GFMBatteryController.VSMInertia=0.25;     % VSM Inertia time constant (sec)
 GFMBatteryController.Damping=0.2;         % VSM damping  0.2
 GFMBatteryController.filtertimeconstant=0.00833;             % VSM real power filter time constant
 GFMBatteryController.reactivepowerfiltertimeconstant=0.0166; % VSM reactive power filter time constant
-GFMBatteryController.voltagedroop=1.05;                      % VSM voltage droop 1.05
-GFMBatteryController.voltagecontrolki=50;                    % VSM voltage controller integral gain
-GFMBatteryController.voltagecontrolkp=10;                    % VSM voltage controller proportional gain
+GFMBatteryController.voltagedroop=0.6;                      % VSM voltage droop 1.05
+GFMBatteryController.voltagecontrolki=5;                    % VSM voltage controller integral gain
+GFMBatteryController.voltagecontrolkp=100;                    % VSM voltage controller proportional gain
 GFMBatteryController.voltagecontroltimeconstant=3e-4;        % VSM voltage controller time constant
 GFMBatteryController.currentcontrollersampletime=1e-4;       % VSM current controller time constant
 GFMBatteryController.currentcontrollerkp=9.5e-5;             % VSM current controller proportional gain
 GFMBatteryController.currentcontrollerki=0.0171;             % VSM current controller integral gain
+GFMBatteryController.voltagsupportgain=3;
+GFMBatteryController.voltagref=1.03;
+GFMBatteryController.frequencymeastimeconstant=0.15;
+GFMBatteryController.maximumvirtualimpedancecurrent=1.3;
+GFMBatteryController.virtimeconstant=0.01;
 % *Setting the Parameters of GFM VSM Battery Inverter*
 BatteryInverter.activePower = battery.power*1e-3; % Refernce active power in (kW)
 BatteryInverter.reactivePower = 10e3; % Refernce reactive power in (kVR)
@@ -130,7 +135,7 @@ VSMbase.current = VSMbase.basePhaseCurrent*sqrt(2);
 VSMbase.impedance = VSMbase.basePhaseVoltage/VSMbase.basePhaseCurrent; % A
 VSMbase.inductance = VSMbase.impedance/(2*pi*VSMbase.frequency);       % H
 VSMbase.capacitance = 1/(VSMbase.impedance*2*pi*VSMbase.frequency);    % F
-BatteryInverter.droopControl.freqSlopeMp = 0.2;   % pu
+BatteryInverter.droopControl.freqSlopeMp = 0.02;   % pu
 BatteryInverter.droopControl.lpfTimeConst = 0.05; % s
 % Lead-lag
 BatteryInverter.droopControl.T2 = 0.006; %lead lag filter time constant
@@ -202,8 +207,8 @@ SM.time_constsnt_steamchest=0.3; % Steam chest time constant
 SM.P_load=40e6;   % Real power of load connected to machine
 SM.Q_load=3e3;    % Reactive power of load connected to machine
 % *PLL Parameters*
-PLL.Kp_pll=200;   % Proportional gain
-PLL.Ki_pll=2000;  % Integral gain
+PLL.Kp_pll=100;   % Proportional gain
+PLL.Ki_pll=1000;  % Integral gain
 % Transmission Line Parameters
 Line.l_km=5;        % Line length in Km 
 Line.r_l=0.03;      % Resistance in Ohms per Km
@@ -261,7 +266,7 @@ BESSGridSupporting =Simulink.Variant(' BESSControl == 2 ');
 %% 
 % *Simulation Time & Time Step*
 SimulationTime=3.5; % Simulation duration in (sec)
-Ts=2e-4;            % Simulation time step in (sec)
+Ts=5e-5;            % Simulation time step in (sec)
 %% 
 % *Simulation Scenario*
 %Choose the Scenario to Simulate 
