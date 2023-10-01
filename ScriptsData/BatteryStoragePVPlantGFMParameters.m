@@ -9,6 +9,9 @@ PVTransformer.VA=200e6;                      % PV transformer VA rating
 PVTransformer.winding_resistance=0.002;      % winding resistance in (pu)
 PVTransformer.winding_lekage_reactance=0.04; % winding lekage reactance in (pu)
 PVTransformer.zero_sequence_reactance=0.1;   % winding zero sequence reactance in (pu) 
+% *Simulation Time & Time Step*
+SimulationTime=3.5; % Simulation duration in (sec)
+Ts=5e-5;            % Simulation time step in (sec)
 % *Grid  Parameters*
 Grid.voltage=230e3;       % Supply L-L voltage 
 Grid.frequency=60;        % Supply frequency in (Hz)
@@ -263,10 +266,6 @@ VSMFrequencyControlledSource =Simulink.Variant(' GridModel == 2 ');
 BESSControl=2; %Choose Grid Model 1 for grid forming VSM and 2 for Grid following V and F supporting control
 BESSVSMControl=Simulink.Variant(' BESSControl == 1 ');
 BESSGridSupporting =Simulink.Variant(' BESSControl == 2 ');
-%% 
-% *Simulation Time & Time Step*
-SimulationTime=3.5; % Simulation duration in (sec)
-Ts=5e-5;            % Simulation time step in (sec)
 %% 
 % *Simulation Scenario*
 %Choose the Scenario to Simulate 
