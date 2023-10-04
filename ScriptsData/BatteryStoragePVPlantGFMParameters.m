@@ -167,7 +167,7 @@ BatteryInverter.currentLimit.overCurrentIsdDelay = 10e-3;% sec
 %BESS controller in grid following mode with voltage and frquency support
 GFLBatteryController.m_v=2;     % Voltage droop gain of BESS inverter
 GFLBatteryController.m_p=15e6;  % Frequency droop for BESS inverter MW per Hz
-GFLBatteryController.Td=0.7e-3; % Time delay in sec for BESS inverter frequency & voltage sensig 
+GFLBatteryController.Td=3e-3; % Time delay in sec for BESS inverter frequency & voltage sensig 
 %BESS controller Priority
 GFLBatteryController.Priority=1; % Set 1 for active power priority and 0 for reactive power priority mode
 %Reference Power and Voltage
