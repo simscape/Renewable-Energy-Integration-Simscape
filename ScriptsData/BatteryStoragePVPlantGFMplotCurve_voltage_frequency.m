@@ -1,4 +1,4 @@
-function BatteryStoragePVPlantGFMplotCurve_voltage_frequency(simlog,n)
+function BatteryStoragePVPlantGFMplotCurve_voltage_frequency(simlog,n,T)
 % Plots the current, voltages, and frequency of the simulation
 % Copyright 2022 - 2023 The MathWorks, Inc. 
 subplot(2,2,1)
@@ -13,7 +13,7 @@ topLine(~aboveLine) = NaN;
 grid on
 xlabel('Time (sec)');
 ylabel('V(PU)');
-xlim([0.6 3.5])
+xlim([0.6 T])
 hold on;
 plot(simlog.get('Vmag_pcc').Values.Time(1:end),bottomLine,simlog.get('Vmag_pcc').Values.Time(1:end),topLine,'LineWidth',1.5);
 plot(simlog.get('Vmag_pcc').Values.Time(1:end),1.1*ones(size(simlog.get('Vmag_pcc').Values.Time(1:end))),'--g');
@@ -39,7 +39,7 @@ topLine(~aboveLine) = NaN;
 grid on
 xlabel('Time (sec)');
 ylabel('F(Hz)');
-xlim([0.6 3.5])
+xlim([0.6 T])
 hold on;
 plot(simlog.get('F_pcc').Values.Time(1:end),bottomLine,simlog.get('F_pcc').Values.Time(1:end),topLine,'LineWidth',1.5);
 plot(simlog.get('F_pcc').Values.Time(1:end),61.2*ones(size(simlog.get('F_pcc').Values.Time(1:end))),'--g');
@@ -53,7 +53,7 @@ end
 lgd.NumColumns = 1;
 hold off;
 title('Frequency at POI');
-xlim([0.6 3.5])
+xlim([0.6 T])
 subplot(2,2,3)
 plot(simlog.get('Vabc_pcc').Values.Time(1:end), simlog.get('Vabc_pcc').Values.Data,'-', 'LineWidth', 1);
 grid on
@@ -66,7 +66,7 @@ plot(simlog.get('Iabc_bat').Values.Time(1:end), simlog.get('Iabc_bat').Values.Da
 grid on
 xlabel('Time (sec)');
 ylabel('I(PU)');
-xlim([0.6 3.5])
+xlim([0.6 T])
 title('BESS Inverter Currents');
 switch n
     case 4

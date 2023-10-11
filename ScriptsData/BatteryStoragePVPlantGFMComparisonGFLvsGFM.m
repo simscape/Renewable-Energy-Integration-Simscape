@@ -38,12 +38,12 @@ end
 disp(Control)
 disp(['Calculated SCR at POI: ',num2str(SCRCal1.SCR)]);
 figure;
-BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare1,Scenario.number)  %Plot results
+BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare1,Scenario.number,SimulationTime)  %Plot results
 %% 
 % Simulating weak grid conditions by reducing feeder impedance and PV penetration 
 % level.
 
-Line.l_km=5;                   %Line length in Km for weak grid
+Line.l_km=5;                  %Line length in Km for weak grid
 Feeder.lengthFirstHalf=0.05;   %Feeder length in Km for weak grid
 Feeder.lengthSecondHalf=0.6;   %Feeder length in Km for weak grid
 Array.insolation=800;          %Solar Insolation
@@ -64,7 +64,7 @@ disp(Control)
 SimlogCompare12=logs_ee_spv_park_battery;
 disp(['Calculated SCR at POI: ',num2str(SCRCal3.SCR)]);
 figure;
-BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare12,Scenario.number) %Plot results
+BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare12,Scenario.number,SimulationTime) %Plot results
 BESSControl=1;             % BESS control grid forming VSM
 if BESSControl==1
     Control='BESS Controller: Grid Forming VSM';
@@ -75,4 +75,4 @@ sim('BatteryStoragePVPlantGFM.slx') %Simulate
 SimlogCompare11=logs_ee_spv_park_battery;
 disp(Control)
 figure;
-BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare11,Scenario.number)  %Plot results
+BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare11,Scenario.number,SimulationTime)  %Plot results

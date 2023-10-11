@@ -10,7 +10,7 @@ PVTransformer.winding_resistance=0.002;      % winding resistance in (pu)
 PVTransformer.winding_lekage_reactance=0.04; % winding lekage reactance in (pu)
 PVTransformer.zero_sequence_reactance=0.1;   % winding zero sequence reactance in (pu) 
 % *Simulation Time & Time Step*
-SimulationTime=3.5; % Simulation duration in (sec)
+SimulationTime=4; % Simulation duration in (sec)
 Ts=5e-5;            % Simulation time step in (sec)
 % *Grid  Parameters*
 Grid.voltage=230e3;       % Supply L-L voltage 
@@ -20,7 +20,7 @@ Grid.Ls=3.5e-2;           % Grid source inductance in (Henry)
 Grid.governor_droop=0.04; % Grid generator governor droop in (pu)
 Grid.damping=0.2;         % Grid generator damping ratio 0.13
 Grid.MVA=20e6;            % Grid generator MVA base
-Grid.H=0.6;               % Grid generator inertia in (sec)
+Grid.H=1.1;               % Grid generator inertia in (sec)
 Grid.Pref=0.3;            % Grid generator real power reference 0.1
 Grid.sensor_time=Ts;    % Speed sensor tim delay in (sec)
 % *Grid Transformer Parameters*
@@ -108,7 +108,7 @@ GFMBatteryController.VSMInertia=0.25;     % VSM Inertia time constant (sec)
 GFMBatteryController.Damping=0.2;         % VSM damping  0.2
 GFMBatteryController.filtertimeconstant=0.00833;             % VSM real power filter time constant
 GFMBatteryController.reactivepowerfiltertimeconstant=0.0166; % VSM reactive power filter time constant
-GFMBatteryController.voltagedroop=0.6;                      % VSM voltage droop 1.05
+GFMBatteryController.voltagedroop=1.05;                      % VSM voltage droop 1.05
 GFMBatteryController.voltagecontrolki=5;                    % VSM voltage controller integral gain
 GFMBatteryController.voltagecontrolkp=100;                    % VSM voltage controller proportional gain
 GFMBatteryController.voltagecontroltimeconstant=3e-4;        % VSM voltage controller time constant
@@ -116,7 +116,7 @@ GFMBatteryController.currentcontrollersampletime=1e-4;       % VSM current contr
 GFMBatteryController.currentcontrollerkp=9.5e-5;             % VSM current controller proportional gain
 GFMBatteryController.currentcontrollerki=0.0171;             % VSM current controller integral gain
 GFMBatteryController.voltagsupportgain=3;
-GFMBatteryController.voltagref=1.03;
+GFMBatteryController.voltagref=1.01;
 GFMBatteryController.frequencymeastimeconstant=0.15;
 GFMBatteryController.maximumvirtualimpedancecurrent=1.3;
 GFMBatteryController.virtimeconstant=0.01;
@@ -167,7 +167,7 @@ BatteryInverter.currentLimit.overCurrentIsdDelay = 10e-3;% sec
 %BESS controller in grid following mode with voltage and frquency support
 GFLBatteryController.m_v=2;     % Voltage droop gain of BESS inverter
 GFLBatteryController.m_p=15e6;  % Frequency droop for BESS inverter MW per Hz
-GFLBatteryController.Td=0.7e-3; % Time delay in sec for BESS inverter frequency & voltage sensig 
+GFLBatteryController.Td=3e-3; % Time delay in sec for BESS inverter frequency & voltage sensig 
 %BESS controller Priority
 GFLBatteryController.Priority=1; % Set 1 for active power priority and 0 for reactive power priority mode
 %Reference Power and Voltage

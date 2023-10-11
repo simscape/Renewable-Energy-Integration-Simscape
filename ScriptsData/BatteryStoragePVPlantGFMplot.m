@@ -25,7 +25,7 @@ if ~exist('h1_simlog_ee_spv_park_battery', 'var') || ...
 end
 figure(h1_simlog_ee_spv_park_battery)
 clf(h1_simlog_ee_spv_park_battery)
-BatteryStoragePVPlantGFMplotCurve_power(logs_ee_spv_park_battery,Scenario.number)
+BatteryStoragePVPlantGFMplotCurve_power(logs_ee_spv_park_battery,Scenario.number,SimulationTime)
 
 % Reuse Voltage and current figures if it exists, else create new figures
 if ~exist('h1_simlog_ee_spv_park_battery_voltage_currents', 'var') || ...
@@ -34,5 +34,5 @@ if ~exist('h1_simlog_ee_spv_park_battery_voltage_currents', 'var') || ...
 end
 figure(h1_simlog_ee_spv_park_battery_voltage_currents)
 clf(h1_simlog_ee_spv_park_battery_voltage_currents)
-BatteryStoragePVPlantGFMplotCurve_voltage_frequency(logs_ee_spv_park_battery,Scenario.number)
+BatteryStoragePVPlantGFMplotCurve_voltage_frequency(logs_ee_spv_park_battery,Scenario.number,SimulationTime)
 [SCRCal] = BatteryStoragePVPlantGFMSCRCal(Line,Feeder,Grid,SubTransmissionLine,PVpower); % Calculated SCR at POI
