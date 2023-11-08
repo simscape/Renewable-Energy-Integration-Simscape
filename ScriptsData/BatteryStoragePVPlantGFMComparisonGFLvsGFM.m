@@ -1,6 +1,6 @@
 
 % This Matlab script performs a comparison between GFM and GFL BESS Controllers 
-% with varying level of grid strength (SCR) and PV power penetration levels.
+% with varying level of grid strength (SCR) and PV penetration levels.
 % Copyright 2022 - 2023 The MathWorks, Inc.
 
 % Simulating strong grid conditions by reducing feeder impedance and PV penetration 
