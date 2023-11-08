@@ -1,4 +1,4 @@
-% Copyright 2023 The MathWorks, Inc.
+    % Copyright 2023 The MathWorks, Inc.
 %% Simulation Parameters
 T=5e-5;                % Step size [s]
 Ts=5e-5;               % Control time step [s]

@@ -13,38 +13,36 @@ topFolder = currentProject().RootFolder;
 %% Create test suite
 
 suite = matlab.unittest.TestSuite.fromFile(...
-fullfile(topFolder, "Tests", "WindFarmGFMControlUnitTest.m"));
-
-%disp("### Not building test suite for detailed model applications.")
+    fullfile(topFolder, "Tests", "WindFarmGFMControlUnitTest.m"));
 
 %% Create test runner
 
 runner = matlab.unittest.TestRunner.withTextOutput( ...
-  OutputDetail = matlab.unittest.Verbosity.Detailed);
+    OutputDetail = matlab.unittest.Verbosity.Detailed);
+
 %% MATLAB Code Coverage Report
 
 coverageReportFolder = fullfile(topFolder, "coverage" + relStr);
 if not(isfolder(coverageReportFolder))
-  mkdir(coverageReportFolder)
+    mkdir(coverageReportFolder)
 end
 
 coverageReport = matlab.unittest.plugins.codecoverage.CoverageReport( ...
-  coverageReportFolder, ...
-  MainFile = "Wind Farm with GFM Control Coverage" + relStr + ".html" );
+    coverageReportFolder, ...
+    MainFile = "Wind Farm with GFM Control Coverage" + relStr + ".html" );
 
-plugin = matlab.unittest.plugins.CodeCoveragePlugin.forFile( ...
-  [ ...
-  fullfile(topFolder, "ScriptsData", "MWWindFarmwithGridformingControls.mlx")
-  fullfile(topFolder, "ScriptsData", "comparisonGFMvsGFL.m")
-  fullfile(topFolder, "ScriptsData","WindFarmGFMControlParametersFast.m")          
-  fullfile(topFolder, "ScriptsData","WindFarmGFMControlplotCurvepower.m")          
-  fullfile(topFolder, "ScriptsData","WindFarmGFMControlplotCurvevoltagefrequency.m")          
-  fullfile(topFolder, "ScriptsData","WindGFMControlPlotresults.m")
-    ], ...
-  Producing = coverageReport );
+plugin = matlab.unittest.plugins.CodeCoveragePlugin.forFile(...
+    [...
+    fullfile(topFolder, "ScriptsData", "MWWindFarmwithGridformingControls.mlx")...
+    fullfile(topFolder, "ScriptsData", "comparisonGFMWithGFL.m")...
+    fullfile(topFolder, "ScriptsData", "WindFarmGFMControlplotCurvepower.m")...
+    fullfile(topFolder, "ScriptsData", "WindFarmGFMControlplotCurvevoltagefrequency.m")...
+    fullfile(topFolder, "ScriptsData", "WindGFMControlPlotresults.m")], ...
+    Producing = coverageReport );
 
 addPlugin(runner, plugin)
 
 %% Run tests
 results = run(runner, suite);
-assertSuccess(results)
+out = assertSuccess(results);
+disp(out);

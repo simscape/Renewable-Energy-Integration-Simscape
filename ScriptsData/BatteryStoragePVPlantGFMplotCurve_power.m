@@ -1,4 +1,4 @@
-function BatteryStoragePVPlantGFMplotCurve_power(simlog,n,T)
+function BatteryStoragePVPlantGFMplotCurve_power(simlog,n)
 % Plots the real and reactive powers for the simulation
 % Copyright 2022 - 2023 The MathWorks, Inc.
 % Plot results
@@ -11,7 +11,7 @@ grid on
 xlabel('Time (sec)')
 ylabel('MW')
 legend('P Total','P Battery', 'P PV Plant')
-xlim([0.6 T])
+xlim([0.6 3.5])
 title('Real Power Output')
 subplot(2,1,2)
 plot(simlog.get('Q_total').Values.Time(1:end), 10^-6*simlog.get('Q_total').Values.Data(1:end),'-', 'LineWidth', 1.5,'Color','#0072BD');
@@ -22,7 +22,7 @@ grid on
 xlabel('Time (sec)')
 ylabel('MVAR')
 legend('Q Total','Q Battery', 'Q PV Plant')
-xlim([0.6 T])
+xlim([0.6 3.5])
 title('Reactive Power Output')
 switch n
     case 4
