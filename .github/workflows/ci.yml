@@ -1,0 +1,72 @@
+# GitHub Actions Workflow with MATLAB Actions
+#
+# For a general overview of GitHub Actions, see
+# https://docs.github.com/en/actions
+#
+# For using MathWorks products in GitHub Actions, see
+# https://github.com/matlab-actions/overview
+#
+# For details about the syntax of this file, see
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+
+# Copyright 2023 The MathWorks, Inc.
+
+name: CI using MATLAB
+
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '**.png'
+      - '**.svg'
+      - '**.txt'
+      - '**.xml'
+
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - '**.png'
+      - '**.svg'
+      - '**.txt'
+      - '**.xml'
+
+  schedule:
+    - cron:  '55/61 20/25 1/6 * *' # schedule a weekly-ish build
+
+jobs:
+
+  job-Wind-Farm-GFM-project-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+        with:
+          release: R2023a
+
+      - name: Wind farm GFM unit tests
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject(pwd); testrunnerWindFarmGFMControl;
+
+  job-PV-Plant-GFM-project-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+        with:
+          release: R2023a
+
+      - name: PV Plant BESS GFM unit tests
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject(pwd); testrunnerPVPlantBESSGFMControl;
