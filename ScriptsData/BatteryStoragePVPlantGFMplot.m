@@ -9,7 +9,7 @@ Scenario.Solar_flactuation_time=Parameters(5);Scenario.Grid_outage_time=Paramete
 Scenario.Line_trip_time=Parameters(7);
 % Generate new simulation results if they don't exist or if they need to be updated
 if ~exist('simlog_ee_spv_park_battery', 'var') || portSetting.Scenario~=Scenario.number || portSetting.GridModel~=GridModel ||  ...
-        portSetting.BESSControl~=BESSControl||portSetting.GridStrength~=GridStrength
+        portSetting.BESSControl~=BESSControl||portSetting.GridStrength~=GridStrength||portSetting.droop~=droop
     portSetting.Scenario=Scenario.number;
     portSetting.GridModel=GridModel;
     portSetting.BESSControl=BESSControl;

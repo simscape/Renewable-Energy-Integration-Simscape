@@ -280,7 +280,8 @@ Scenario.Line_trip_time=Parameters(7);
 portSetting.Scenario=0;    % Default port setting 
 portSetting.GridModel=1;   % Default grid source model is frequency controlled source
 portSetting.BESSControl=0; % Default BESS controller is VSM GFM
-portSetting.GridStrength=0; GridStrength=0; % Default grid is a weak grid with SCR=0.4           
+portSetting.GridStrength=0; GridStrength=0; % Default grid is a weak grid with SCR=0.4  
+portSetting.droop=2;
 %% 
 % *IEEE 2800 Standards Compliance Table*
 TableIII=readtable('BatteryStoragePVPlantGFMTableComplianceIEEEStd.xlsx','VariableNamingRule', 'preserve');
