@@ -14,6 +14,7 @@ if ~exist('simlog_ee_spv_park_battery', 'var') || portSetting.Scenario~=Scenario
     portSetting.GridModel=GridModel;
     portSetting.BESSControl=BESSControl;
     portSetting.GridStrength=GridStrength;
+    portSetting.droop=droop;
     sim('BatteryStoragePVPlantGFM.slx')
 end
 
