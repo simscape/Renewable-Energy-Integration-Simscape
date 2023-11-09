@@ -282,6 +282,7 @@ portSetting.GridModel=1;   % Default grid source model is frequency controlled s
 portSetting.BESSControl=0; % Default BESS controller is VSM GFM
 portSetting.GridStrength=0; GridStrength=0; % Default grid is a weak grid with SCR=0.4  
 portSetting.droop=2;
+droop=2;
 %% 
 % *IEEE 2800 Standards Compliance Table*
 TableIII=readtable('BatteryStoragePVPlantGFMTableComplianceIEEEStd.xlsx','VariableNamingRule', 'preserve');
