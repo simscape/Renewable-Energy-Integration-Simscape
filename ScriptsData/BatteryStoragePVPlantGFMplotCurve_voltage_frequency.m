@@ -1,7 +1,7 @@
 function BatteryStoragePVPlantGFMplotCurve_voltage_frequency(simlog,n)
 % Plots the current, voltages, and frequency of the simulation
 % Copyright 2022 - 2023 The MathWorks, Inc. 
-subplot(2,2,1)
+ax1=subplot(2,2,1)
 v=simlog.get('Vmag_pcc').Values.Data(1:end);
 aboveLine = (v>1.1 | v<0.9);
 % Create 2 copies of v
@@ -27,7 +27,7 @@ end
 lgd.NumColumns = 1;
 hold off;
 title('Voltage Magnitude at POI');
-subplot(2,2,2)
+ax2=subplot(2,2,2)
 f=simlog.get('F_pcc').Values.Data(1:end);
 aboveLine = (f>61.2 | f<58.8);
 % Create 2 copies of f
@@ -54,20 +54,21 @@ lgd.NumColumns = 1;
 hold off;
 title('Frequency at POI');
 xlim([0.6 3.5])
-subplot(2,2,3)
+ax3=subplot(2,2,3)
 plot(simlog.get('Vabc_pcc').Values.Time(1:end), simlog.get('Vabc_pcc').Values.Data,'-', 'LineWidth', 1);
 grid on
 xlabel('Time (sec)');
 ylabel('V(PU)');
 xlim([0.6 3.5])
 title('Voltages at POI');
-subplot(2,2,4)
+ax4=subplot(2,2,4)
 plot(simlog.get('Iabc_bat').Values.Time(1:end), simlog.get('Iabc_bat').Values.Data,'-', 'LineWidth', 1);
 grid on
 xlabel('Time (sec)');
 ylabel('I(PU)');
 xlim([0.6 3.5])
 title('BESS Inverter Currents');
+linkaxes([ax1,ax2,ax3,ax4],'x');
 switch n
     case 4
       x=' Temporary Fault';
