@@ -2,7 +2,7 @@ function WindFarmGFMControlplotCurvevoltagefrequency(simlog,n,Tsim,control,code,
 % Plots the current, voltages, and frequency of the simulation
 % Copyright 2023 The MathWorks, Inc. 
 figure;
-bx1=subplot(2,2,1)
+bx1=subplot(2,2,1);
 v=simlog.get('Vmag').Values.Data(100:end);
 aboveLine = (v>code.vh | v<code.vl);
 % Create 2 copies of v
@@ -28,7 +28,7 @@ end
 lgd.NumColumns = 1;
 hold off;
 title('Voltage Magnitude at POI');
-bx2=subplot(2,2,2)
+bx2=subplot(2,2,2);
 f=simlog.get('F').Values.Data(100:end);
 aboveLine = (f>code.fh | f<code.fl);
 % Create 2 copies of f
@@ -55,14 +55,14 @@ lgd.NumColumns = 1;
 hold off;
 title('Frequency at POI');
 xlim([tevent-1 tevent+1])
-bx3=subplot(2,2,3)
+bx3=subplot(2,2,3);
 plot(simlog.get('Vg').Values.Time(1:end), squeeze(simlog.get('Vg').Values.Data),'-', 'LineWidth', 1);
 grid on
 xlabel('Time (sec)');
 ylabel('V(PU)');
 xlim([tevent-.2 tevent+.2])
 title('Voltages at POI');
-bx4=subplot(2,2,4)
+bx4=subplot(2,2,4);
 plot(simlog.get('Ig').Values.Time(1:end), squeeze(simlog.get('Ig').Values.Data),'-', 'LineWidth', 1);
 grid on
 xlabel('Time (sec)');
