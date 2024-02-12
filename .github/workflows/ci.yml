@@ -47,7 +47,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
         with:
-          release: R2023a
+          release: R2023b
 
       - name: Wind farm GFM unit tests
         uses: matlab-actions/run-command@v1
@@ -64,7 +64,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
         with:
-          release: R2023a
+          release: R2023b
 
       - name: PV Plant BESS GFM unit tests
         uses: matlab-actions/run-command@v1
