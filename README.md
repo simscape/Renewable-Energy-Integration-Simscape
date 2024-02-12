@@ -45,6 +45,6 @@ Once the fault clears, the system returns to its pre-fault state in 0.5 sec, whi
 ## Setup
 - Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
 - In the toolstrip, use the project shortcut buttons to load the model.
-- This project requires MATLAB&reg; R2023a or later.
+- This project requires MATLAB&reg; R2023b or later.
 
 Copyright 2022-2023 The MathWorks, Inc.

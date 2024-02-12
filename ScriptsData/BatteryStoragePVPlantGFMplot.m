@@ -8,14 +8,14 @@ Scenario.Fault_duration=Parameters(3);Scenario.Load_switching_time=Parameters(4)
 Scenario.Solar_flactuation_time=Parameters(5);Scenario.Grid_outage_time=Parameters(6);
 Scenario.Line_trip_time=Parameters(7);
 % Generate new simulation results if they don't exist or if they need to be updated
-if ~exist('simlog_ee_spv_park_battery', 'var') || portSetting.Scenario~=Scenario.number || portSetting.GridModel~=GridModel ||  ...
+if ~exist('out.simlog_ee_spv_park_battery', 'var') || portSetting.Scenario~=Scenario.number || portSetting.GridModel~=GridModel ||  ...
         portSetting.BESSControl~=BESSControl||portSetting.GridStrength~=GridStrength||portSetting.droop~=droop
     portSetting.Scenario=Scenario.number;
     portSetting.GridModel=GridModel;
     portSetting.BESSControl=BESSControl;
     portSetting.GridStrength=GridStrength;
     portSetting.droop=droop;
-    sim('BatteryStoragePVPlantGFM.slx')
+    out=sim('BatteryStoragePVPlantGFM.slx','SrcWorkspace','current')
 end
 
 % Reuse Power figure if it exists, else create new figure
@@ -25,7 +25,7 @@ if ~exist('h1_simlog_ee_spv_park_battery', 'var') || ...
 end
 figure(h1_simlog_ee_spv_park_battery)
 clf(h1_simlog_ee_spv_park_battery)
-BatteryStoragePVPlantGFMplotCurve_power(logs_ee_spv_park_battery,Scenario.number,SimulationTime)
+BatteryStoragePVPlantGFMplotCurve_power(out.logs_ee_spv_park_battery,Scenario.number,SimulationTime)
 
 % Reuse Voltage and current figures if it exists, else create new figures
 if ~exist('h1_simlog_ee_spv_park_battery_voltage_currents', 'var') || ...
@@ -34,5 +34,5 @@ if ~exist('h1_simlog_ee_spv_park_battery_voltage_currents', 'var') || ...
 end
 figure(h1_simlog_ee_spv_park_battery_voltage_currents)
 clf(h1_simlog_ee_spv_park_battery_voltage_currents)
-BatteryStoragePVPlantGFMplotCurve_voltage_frequency(logs_ee_spv_park_battery,Scenario.number,SimulationTime)
+BatteryStoragePVPlantGFMplotCurve_voltage_frequency(out.logs_ee_spv_park_battery,Scenario.number,SimulationTime)
 [SCRCal] = BatteryStoragePVPlantGFMSCRCal(Line,Feeder,Grid,SubTransmissionLine,PVpower); % Calculated SCR at POI

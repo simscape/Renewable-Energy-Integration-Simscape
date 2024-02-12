@@ -29,7 +29,7 @@ Scenario.Solar_flactuation_time=Parameters(5);Scenario.Grid_outage_time=Paramete
 Scenario.Line_trip_time=Parameters(7);
 BESSControl=2;                      % BESS control grid following voltage and frequency support 
 sim('BatteryStoragePVPlantGFM.slx') % Simulate 
-SimlogCompare1=logs_ee_spv_park_battery;
+SimlogCompare1=out.logs_ee_spv_park_battery;
 if BESSControl==1
     Control='BESS Controller: Grid Forming VSM';
 else
@@ -61,7 +61,7 @@ else
 end
 sim('BatteryStoragePVPlantGFM.slx') % Simulate 
 disp(Control)
-SimlogCompare12=logs_ee_spv_park_battery;
+SimlogCompare12=out.logs_ee_spv_park_battery;
 disp(['Calculated SCR at POI: ',num2str(SCRCal3.SCR)]);
 figure;
 BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare12,Scenario.number,SimulationTime) %Plot results
@@ -72,7 +72,7 @@ else
     Control='BESS Controller: Grid Following V & F Support';
 end
 sim('BatteryStoragePVPlantGFM.slx') %Simulate
-SimlogCompare11=logs_ee_spv_park_battery;
+SimlogCompare11=out.logs_ee_spv_park_battery;
 disp(Control)
 figure;
 BatteryStoragePVPlantGFMplotCurve_voltage_frequency(SimlogCompare11,Scenario.number,SimulationTime)  %Plot results
