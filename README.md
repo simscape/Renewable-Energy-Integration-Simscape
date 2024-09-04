@@ -45,10 +45,10 @@ This project investigates the use of admittance scanning to detect oscillatory i
 The IBRs can destabilize grid voltage because of undesired interactions between the IBR feedback controller and the variations in equivalent grid impedance at the point of interconnection (POI). 
 These interactions cause oscillations in the three-phase voltages and currents, which can cause the protection system to trip the renewable plant. 
 
-You assess the oscillatory instability phenomena with IBRs using methods such as admittance/ impedance scanning, where the effective admittance/ impedance of 
-the renewable plant and grid are estimated over a range of different frequencies.
+You can assess the oscillatory instability using admittance/ impedance scanning technique, where the effective admittance/ impedance of 
+the renewable plant and the grid are estimated over a range of different frequencies.
 
-You can use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.
+Use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.
 
 ![](Pictures/AdmiP1.png)
 
