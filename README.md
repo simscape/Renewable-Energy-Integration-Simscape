@@ -5,7 +5,8 @@ This repository provides design solutions for the operation of power systems wit
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Renewable-Energy-Integration-Simscape)
 
 This repository has the following design solutions:
-in [Section `Features`](#Performance-Evaluation-of-Grid_Forming-Battery_Energy-Storage-Systems-in-Solar-PV-Plants)
+1. in [Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants](#Performance-Evaluation-of-Grid_Forming-Battery_Energy-Storage-Systems-in-Solar-PV-Plants)
+2. in [Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farm](#Evaluate-Performance-of-Grid-Forming-Controls-for-Type-4-Wind-Generators-in-Wind-Farms)
 
 ## Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
 This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
