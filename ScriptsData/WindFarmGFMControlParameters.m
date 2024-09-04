@@ -1,4 +1,4 @@
-    % Copyright 2023 The MathWorks, Inc.
+     % Copyright 2023 The MathWorks, Inc.
 %% Simulation Parameters
 T=5e-5;                % Step size [s]
 Ts=5e-5;               % Control time step [s]
@@ -66,7 +66,7 @@ base.z=(base.kV)^2/base.mVA;                                    %Base impedance
 %% Wind Controller Parameters
 %Current controller Wind inverter
 windController.tSensor=2e-5; % Sensor time constant
-windController.kpic=1;       % Proportional gain
+windController.kpic=1.5;       % Proportional gain
 windController.kiic=250;     % Integral gain
 windController.kd=0;         % Derivative gain
 % AC Voltage controller Wind inverter

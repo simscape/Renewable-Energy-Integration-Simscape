@@ -19,7 +19,6 @@ These figures show the control schemes for the BESS controllers.
 These figures show that the BESS with GFM control responds to an increase in load and delivers the real and reactive power required to maintain stable system operation.
 
 ![](Pictures/BESSLoadchange.PNG)
-
 ## Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
 This project evaluates the capabilities of a grid-forming (GFM) controller of type-4 wind turbine generators in maintaining a stable power system operation with high inverter-based renewable energy sources penetration. 
 Use this model to compare the dynamic performance of the grid-connected wind farm during normal operation and contingencies, such as a large drop in wind power, load change, faults, and generation outage. 
@@ -41,10 +40,25 @@ These figures show the response of the wind plant during a fault condition. A st
 Once the fault clears, the system returns to its pre-fault state in 0.5 sec, which follows the post-fault recovery requirements of standard. 
 
 ![](Pictures/MGFMFault.PNG)
+## Assess the Stability of Inverter-Based Resources (IBRs) using Admittance Scan Technique
+This project investigates the use of admittance scanning to detect oscillatory instability in power networks with a high presence of inverter-based resources (IBRs).
+The IBRs can destabilize grid voltage because of undesired interactions between the IBR feedback controller and the variations in equivalent grid impedance at the point of interconnection (POI). 
+These interactions cause oscillations in the three-phase voltages and currents, which can cause the protection system to trip the renewable plant. For assessing the oscillatory instability phenomena with IBRs, methods such as admittance/ impedance scanning are used, where the effective admittance/ impedance of 
+the renewable plant and grid are estimated over a range of different frequencies.
+
+You can use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.
+
+![](Pictures/AdmiP1.png)
+
+Use this model and the block to study the effect of renewable power penetration on small signal stability of the system.
+
+![](Pictures/Admiscanmodel.png)
+![](Pictures/Scanadmi.png)
+
 
 ## Setup
 - Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
 - In the toolstrip, use the project shortcut buttons to load the model.
-- This project requires MATLAB&reg; R2023b or later.
+- This project requires MATLAB&reg; R2024a or later.
 
-Copyright 2022-2023 The MathWorks, Inc.
+Copyright 2022-2024 The MathWorks, Inc.

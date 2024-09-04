@@ -22,7 +22,7 @@ end
 if ~exist('h1_simlog_ee_spv_park_battery', 'var') || ...
         ~isgraphics(h1_simlog_ee_spv_park_battery, 'figure')
      h1_simlog_ee_spv_park_battery= figure('Name', 'h1_simlog_ee_spv_park_battery');
-end
+end   
 figure(h1_simlog_ee_spv_park_battery)
 clf(h1_simlog_ee_spv_park_battery)
 BatteryStoragePVPlantGFMplotCurve_power(out.logs_ee_spv_park_battery,Scenario.number,SimulationTime)

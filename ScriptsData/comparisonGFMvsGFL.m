@@ -14,7 +14,7 @@ if(gridCode=="ERI GRID")
     lvrt.voltage=[0,0.499,0.5,0.899,0.9,0.901];
 end
 %%Only Grid Following Control in Strong Grid
-set_param('WindFarmGFMControlFast/Wind Farm','nGFM',0);
+set_param('WindFarmGFMControl/Wind Farm','nGFM',0);
 %%Simulate wind Power Change Scenario
 scenarioNumber=1;
 time.load=Tsim+1;
@@ -23,11 +23,11 @@ time.fault=Tsim+1;
 time.island=Tsim+1;
 time.lineTrip=Tsim+1;
 islanded=0;
-out=sim('WindFarmGFMControlFast','SrcWorkspace','current');
+out=sim('WindFarmGFMControl','SrcWorkspace','current');
 WindFarmGFMControlplotCurvevoltagefrequency(out.logsWindGFMControl,scenarioNumber,Tsim,' with Only Grid Following Controllers',code,tevent)
 %%
 %%With GFM
-set_param('WindFarmGFMControlFast/Wind Farm','nGFM',2);
+set_param('WindFarmGFMControl/Wind Farm','nGFM',2);
 %%Weak Grid
 scenarioNumber=1;
 time.load=Tsim+1;
@@ -36,5 +36,5 @@ time.fault=Tsim+1;
 time.island=Tsim+1;
 time.lineTrip=Tsim+1;
 islanded=0;
-out=sim('WindFarmGFMControlFast','SrcWorkspace','current');
+out=sim('WindFarmGFMControl','SrcWorkspace','current');
 WindFarmGFMControlplotCurvevoltagefrequency(out.logsWindGFMControl,scenarioNumber,Tsim,' with M-GFM Wind Controllers',code,tevent)

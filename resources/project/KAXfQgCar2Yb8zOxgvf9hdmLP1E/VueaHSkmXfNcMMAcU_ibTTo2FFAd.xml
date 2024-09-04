@@ -1,2 +1,2 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<Info Type="Basic" GroupUUID="ae1434d3-654d-4be1-83ef-dc3b3ca1221f" Visible="1" Icon="" File="Models/PVPlant/BatteryStoragePVPlantGFM.slx" Name="Battery Storage in PV Plant with GFM"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="Models/PVPlant/BatteryStoragePVPlantGFM.slx" GroupUUID="ae1434d3-654d-4be1-83ef-dc3b3ca1221f" Icon="" Name="Battery Storage in PV Plant with GFM" Type="Basic" Visible="1"/>

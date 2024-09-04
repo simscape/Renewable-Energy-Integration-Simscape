@@ -2,7 +2,7 @@ classdef WindFarmGFMControlUnitTest < matlab.unittest.TestCase
     % This MATLAB unit test is used to run all the codes used in the
     % Design and Analysis of Wind Farm GFM Control example.
 
-    % Copyright 2023 The MathWorks, Inc.
+    % Copyright 2024 The MathWorks, Inc.
 
     properties
         modelname = "WindFarmGFMControl";
