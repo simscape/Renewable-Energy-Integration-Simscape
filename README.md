@@ -41,16 +41,18 @@ Once the fault clears, the system returns to its pre-fault state in 0.5 sec, whi
 
 ![](Pictures/MGFMFault.PNG)
 ## Assess the Stability of Inverter-Based Resources (IBRs) using Admittance Scan Technique
-This project investigates the use of admittance scanning to detect oscillatory instability in power networks with a high presence of inverter-based resources (IBRs).
+This project investigates the use of admittance scanning to detect oscillatory instability in power networks with a high presence of IBRs.
 The IBRs can destabilize grid voltage because of undesired interactions between the IBR feedback controller and the variations in equivalent grid impedance at the point of interconnection (POI). 
-These interactions cause oscillations in the three-phase voltages and currents, which can cause the protection system to trip the renewable plant. For assessing the oscillatory instability phenomena with IBRs, methods such as admittance/ impedance scanning are used, where the effective admittance/ impedance of 
+These interactions cause oscillations in the three-phase voltages and currents, which can cause the protection system to trip the renewable plant. 
+
+You assess the oscillatory instability phenomena with IBRs using methods such as admittance/ impedance scanning, where the effective admittance/ impedance of 
 the renewable plant and grid are estimated over a range of different frequencies.
 
 You can use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.
 
 ![](Pictures/AdmiP1.png)
 
-Use this model and the block to study the effect of renewable penetration on small signal stability of the system.
+Use this model and the block to study the effect of renewable penetration on small signal stability of the power system.
 
 ![](Pictures/Admiscanmodel.png)
 ![](Pictures/Scanadmi.png)
