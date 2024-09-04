@@ -6,7 +6,9 @@ This repository provides design solutions for the operation of power systems wit
 
 This repository has the following design solutions:
 
-[Go to Features](#Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants)
+1. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
+2. Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
+3. Assess the Stability of Inverter-Based Resources (IBRs) using Admittance Scan Technique
 
 # Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
 This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
