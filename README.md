@@ -50,7 +50,7 @@ You can use this admittance scan block to obtain the admittance spectrum of grid
 
 ![](Pictures/AdmiP1.png)
 
-Use this model and the block to study the effect of renewable power penetration on small signal stability of the system.
+Use this model and the block to study the effect of renewable penetration on small signal stability of the system.
 
 ![](Pictures/Admiscanmodel.png)
 ![](Pictures/Scanadmi.png)
