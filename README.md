@@ -6,7 +6,7 @@ This repository provides design solutions for the operation of power systems wit
 
 This repository has the following design solutions:
 
-1. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
+1. [![Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants]](#Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants )
 2. Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
 3. Assess the Stability of Inverter-Based Resources (IBRs) using Admittance Scan Technique
 
