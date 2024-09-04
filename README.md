@@ -6,11 +6,11 @@ This repository provides design solutions for the operation of power systems wit
 
 This repository has the following design solutions:
 
-1. [![View ​Renewable Energy Integration Design with Simscape on File Exchange]](# Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants)
+[View ​Renewable Energy Integration Design with Simscape on File Exchange](#Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants)
 2. Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
 3. Assess the Stability of Inverter-Based Resources (IBRs) using Admittance Scan Technique
 
-# Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
+## Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
 This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
 Use this model to assess the dynamic performance of the BESS connected to the PV plant during normal operation and contingencies, such as a large drop in PV power, significant load change, grid outage, and faults. Simulate the model to verify whether the designed PV plant and BESS unit, along with their associated controllers, conform the performance requirements of the current IEEE 2800 standards. 
 
