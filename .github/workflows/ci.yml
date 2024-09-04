@@ -52,7 +52,7 @@ jobs:
       - name: Wind farm GFM unit tests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); testrunnerWindFarmGFMControl;
+          command: openProject(pwd); UnitTestrunnerWindFarmGFMControl;
 
   job-PV-Plant-GFM-project-unit-tests:
     runs-on: ubuntu-latest
@@ -69,7 +69,7 @@ jobs:
       - name: PV Plant BESS GFM unit tests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); testrunnerPVPlantBESSGFMControl;
+          command: openProject(pwd); UnitTestrunnerPVPlantBESSGFMControl;
 
   job-Admittance-Scan-project-unit-tests:
     runs-on: ubuntu-latest
@@ -83,4 +83,4 @@ jobs:
       - name: Admittance Scan unit tests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); testrunnerAdmittanceSCANPRBS;
+          command: openProject(pwd); UnitTestrunnerAdmittanceSCANPRBS;
