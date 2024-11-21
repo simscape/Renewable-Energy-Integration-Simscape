@@ -1,4 +1,4 @@
-     % Copyright 2023 The MathWorks, Inc.
+% Copyright 2023 The MathWorks, Inc.
 %% Simulation Parameters
 T=5e-5;                % Step size [s]
 Ts=5e-5;               % Control time step [s]
@@ -41,7 +41,7 @@ windTurbine.airDensity                  = 1.225;                     % (kg/m^3) 
 windTurbine.vWindThreshold              = 0.01;                      % (m/s) Threshold wind velocity to avoid divison by zero in Tip Speed Ratio calculation
 windTurbine.wThreshold                  = 0.01;                      % (rad/s) Threshold wind turbine velocity for numerical convergence
 windTurbine.cpBraking                   = -0.001;                    % Power coefficient for aerodynamic braking
-windTurbine.turbineRatedPower           = 6.5;                       % Power turbine rated power
+windTurbine.turbineRatedPower           = 12.5;                       % Power turbine rated power
 % Turbine state machine parameters
 windTurbine.vWindCutInLower             = 4;                            % (m/s) Cut in lower wind speed
 windTurbine.vWindCutOut                 = 23;                           % (m/s) Cut out wind speed
@@ -85,7 +85,7 @@ windController.kdvgfm=0;    %Voltage controller derevative gain
 %Parameters of G-GFM Transfer function 
 gGFM.kt=10.5;      %GFM tracking cofficient
 gGFM.kj=0.05;      %GFM inertia cofficient
-gGFM.kd=10;         %GFM damping cofficient
+gGFM.kd=100;         %GFM damping cofficient
 gGFMTf=tf([1 gGFM.kt],[gGFM.kj gGFM.kd]); % G-GFM Real power vs Frequency Transfer function
 %Converting the Transfer Function Parameters to descrete domain
 gGFMTfz=c2d(gGFMTf,Ts/10);
@@ -97,7 +97,7 @@ gGFM.fref=60;       %GFM frequency reference
 gGFM.Imax=0.4;      %Current limit
 gGFM.x_vir=3e-1;    %Virtual reactance
 gGFM.r_vir=5e-2;  %Virtual resistance
-%% GFM using Dc link voltage control by MSC (M-GFM)
+%% GFM MSC (M-GFM)
 mGFM.d=0.7;        %GFM damping cofficient
 mGFM.h=0.1;        %GFM inertia cofficient
 mGFM.kp=0.07;        %GFM active power droop cofficient
@@ -111,7 +111,7 @@ mGFM.x_vir=0.3;    %Virtual reactance
 mGFM.r_vir=0.05;   %Virtual resistance
 
 %% Machine Parameters
-pmsm.pmax = 6.5e6;  % Maximum power                   [W]
+pmsm.pmax = 12.5e6;  % Maximum power                   [W]
 pmsm.ld   = 1.6e-3; % Stator d-axis inductance        [H]
 pmsm.lq   = 1.6e-3; % Stator q-axis inductance        [H]
 pmsm.rs   = 8.2e-4; % Stator resistance per phase     [Ohm]
@@ -165,3 +165,4 @@ TableIII.('Satisfied'){5}= char(hex2dec('2713'));
 TableIII=table(TableIII,'VariableNames',{'Table: Compliance on Key Criteria mentioned in Standards'});
 %% Initilazation of model with GGFM control as default wind GFM Controller
 imGFM=0; %Set flag to 1 for initating the initilization process with MGFM control
+%%

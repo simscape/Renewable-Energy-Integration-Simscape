@@ -30,4 +30,4 @@ function sys=admittancescanPRBS(Vd,Vq,f,data,o)
         sys=[sysQQ,sysQD];
         plotAdmittanceQ(sysQQ,sysQD,f)  %Plots the Bode plots for Q-axis admittance
     end
-end
+end  

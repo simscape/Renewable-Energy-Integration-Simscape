@@ -8,6 +8,7 @@ This repository provides design solutions for the operation of power systems wit
 1. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants.
 2. Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farm.
 3. Assess the Stability of Inverter-Based Resources using Admittance Scan Technique.
+4. Evaluate Performance of MTHVDC System with GFM Control for Offshore Wind Integration.
 
 ## Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
 This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
@@ -62,7 +63,15 @@ Use this model and the block to study the effect of renewable penetration on sma
 
 ![](Pictures/Admiscanmodel.png)
 ![](Pictures/Scanadmi.png)
+##  Evaluate Performance of Multi-terminal High Voltage Direct Current (MTHVDC) Systems with GFM Control for Offshore Wind Integration
+This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high off-shore wind penetration. 
 
+MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
+
+You can investigate the performance of various types of controlllers for the HVDC stations including grid forming controls. Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
+performance under various dynamic scenario, like, faults, large variation in renewable power, grid outage, etc.
+
+![](Pictures/HVDCModelGFM.png)
 
 ## Setup
 - Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
