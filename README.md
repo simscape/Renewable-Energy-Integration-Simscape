@@ -19,6 +19,7 @@ Use this model to assess the dynamic performance of the BESS connected to the PV
 This model provides two control modes for the BESS controller:
 The first control mode comprises a phase-locked-loop (PLL)-based grid-following (GFL) BESS controller with voltage and frequency support.
 The second control mode comprises a virtual synchronous machine (VSM)-based GFM controller.
+
 These figures show the control schemes for the BESS controllers.
 
 ![](Pictures/BESSGFL&GFM.PNG)
