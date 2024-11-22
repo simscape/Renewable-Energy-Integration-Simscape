@@ -68,6 +68,7 @@ Use this model and the block to study the effect of renewable penetration on sma
 This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high off-shore wind penetration. 
 
 MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
+
 This figure shows the general control architecture of a VSC HVDC station.
 
 ![](Pictures/HVDCControlsystem.png)
