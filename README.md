@@ -66,11 +66,11 @@ Use this model and the block to study the effect of renewable penetration on sma
 ![](Pictures/Admiscanmodel.png)
 ![](Pictures/Scanadmi.png)
 ##  Evaluate Performance of Multi-terminal High Voltage Direct Current (MTHVDC) Systems with GFM Control for Offshore Wind Integration
-This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high off-shore wind penetration. 
+This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high offshore wind penetration. 
 
 MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
 
-This figure shows the general control architecture of a VSC HVDC station.
+This figure shows the general control architecture of a VSC HVDC interconnection.
 
 ![](Pictures/HVDCControlsystem.png)
 
