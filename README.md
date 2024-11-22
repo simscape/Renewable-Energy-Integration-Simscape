@@ -28,6 +28,10 @@ These figures show that the BESS with GFM control responds to an increase in loa
 ![](Pictures/BESSLoadchange.PNG)
 ## Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
 This project evaluates the capabilities of a grid-forming (GFM) controller of type-4 wind turbine generators in maintaining a stable power system operation with high inverter-based renewable energy sources penetration. 
+
+This figure shows the general control architecture of a VSC HVDC station.
+![](Pictures/HVDCControlsystem.png)
+
 Use this model to compare the dynamic performance of the grid-connected wind farm during normal operation and contingencies, such as a large drop in wind power, load change, faults, and generation outage. 
 Run this model to test whether the designed GFM wind controller helps the wind farm to conform with the performance requirements that the industry standards recommend.
 
