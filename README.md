@@ -29,9 +29,6 @@ These figures show that the BESS with GFM control responds to an increase in loa
 ## Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
 This project evaluates the capabilities of a grid-forming (GFM) controller of type-4 wind turbine generators in maintaining a stable power system operation with high inverter-based renewable energy sources penetration. 
 
-This figure shows the general control architecture of a VSC HVDC station.
-![](Pictures/HVDCControlsystem.png)
-
 Use this model to compare the dynamic performance of the grid-connected wind farm during normal operation and contingencies, such as a large drop in wind power, load change, faults, and generation outage. 
 Run this model to test whether the designed GFM wind controller helps the wind farm to conform with the performance requirements that the industry standards recommend.
 
@@ -71,11 +68,16 @@ Use this model and the block to study the effect of renewable penetration on sma
 This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high off-shore wind penetration. 
 
 MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
+This figure shows the general control architecture of a VSC HVDC station.
 
+![](Pictures/HVDCControlsystem.png)
+
+This figure shows the MTHVDC model for offshore wind integration.
+
+![](Pictures/HVDCModelGFM.png)
 You can investigate the performance of various types of controlllers for the HVDC stations including grid forming controls. Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
 performance under various dynamic scenario, like, faults, large variation in renewable power, grid outage, etc.
 
-![](Pictures/HVDCModelGFM.png)
 
 ## Setup
 - Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
