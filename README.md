@@ -5,26 +5,21 @@ This repository provides design solutions for the operation of power systems wit
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Renewable-Energy-Integration-Simscape)
 
 # This repository includes the following design solutions
-### 1. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants.
+### 1. Evaluate Performance of MTHVDC System with GFM Control for Offshore Wind Integration.
 ### 2. Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farm.
 ### 3. Assess the Stability of Inverter-Based Resources using Admittance Scan Technique.
-### 4. Evaluate Performance of MTHVDC System with GFM Control for Offshore Wind Integration.
+### 4. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants.
 
-## Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
-This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
-Use this model to assess the dynamic performance of the BESS connected to the PV plant during normal operation and contingencies, such as a large drop in PV power, significant load change, grid outage, and faults. Simulate the model to verify whether the designed PV plant and BESS unit, along with their associated controllers, conform the performance requirements of the current IEEE 2800 standards. 
+##  Evaluate Performance of Multi-terminal High Voltage Direct Current (MTHVDC) Systems with GFM Control for Offshore Wind Integration
+This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high offshore wind penetration. 
 
-![](Pictures/SystemModel.png)
+MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
 
-This model provides two control modes for the BESS controller:
-The first control mode comprises a phase-locked-loop (PLL)-based grid-following (GFL) BESS controller with voltage and frequency support.
-The second control mode comprises a virtual synchronous machine (VSM)-based GFM controller.
+This figure shows the MTHVDC model for offshore wind integration.
 
-These figures show the control schemes for the BESS controllers.
-
-![](Pictures/BESSGFL&GFM.PNG)
-
-These figures show that the BESS with GFM control responds to an increase in load and delivers the real and reactive power required to maintain stable system operation.
+![](Pictures/HVDCModelGFM.png)
+You can investigate the performance of various types of controlllers for the HVDC stations including grid forming (GFM) controls. Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
+performance under various dynamic scenario, like, faults, large variation in renewable power, grid outage, etc.
 
 ![](Pictures/BESSLoadchange.PNG)
 ## Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
@@ -65,17 +60,22 @@ Use this model and the block to study the effect of renewable penetration on sma
 
 ![](Pictures/Admiscanmodel.png)
 ![](Pictures/Scanadmi.png)
-##  Evaluate Performance of Multi-terminal High Voltage Direct Current (MTHVDC) Systems with GFM Control for Offshore Wind Integration
-This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high offshore wind penetration. 
 
-MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
+## Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants
+This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
+Use this model to assess the dynamic performance of the BESS connected to the PV plant during normal operation and contingencies, such as a large drop in PV power, significant load change, grid outage, and faults. Simulate the model to verify whether the designed PV plant and BESS unit, along with their associated controllers, conform the performance requirements of the current IEEE 2800 standards. 
 
-This figure shows the MTHVDC model for offshore wind integration.
+![](Pictures/SystemModel.png)
 
-![](Pictures/HVDCModelGFM.png)
-You can investigate the performance of various types of controlllers for the HVDC stations including grid forming (GFM) controls. Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
-performance under various dynamic scenario, like, faults, large variation in renewable power, grid outage, etc.
+This model provides two control modes for the BESS controller:
+The first control mode comprises a phase-locked-loop (PLL)-based grid-following (GFL) BESS controller with voltage and frequency support.
+The second control mode comprises a virtual synchronous machine (VSM)-based GFM controller.
 
+These figures show the control schemes for the BESS controllers.
+
+![](Pictures/BESSGFL&GFM.PNG)
+
+These figures show that the BESS with GFM control responds to an increase in load and delivers the real and reactive power required to maintain stable system operation.
 
 ## Setup
 - Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
