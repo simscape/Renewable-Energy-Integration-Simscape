@@ -10,8 +10,10 @@ This repository provides design solutions for the operation of power systems wit
 ### 3. Assess the Stability of Inverter-Based Resources using Admittance Scan Technique.
 ### 4. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants.
 
-# Abstracts
+# Overview
+
 ##  Evaluate Performance of Multi-terminal High Voltage Direct Current (MTHVDC) Systems with GFM Control for Offshore Wind Integration
+
 This study evaluates the capabilities of voltage source converter (VSC) based MTHVDC systems in maintaining a stable system during high offshore wind penetration. 
 
 MTHVDC system have more than two converter stations interconnected by DC lines, enabling power transfer between multiple offshore locations.
@@ -81,4 +83,4 @@ These figures show the control schemes for the BESS controllers.
 - In the toolstrip, use the project shortcut buttons to load the model.
 - This project requires MATLAB&reg; R2024a or later.
 
-Copyright 2022-2024 The MathWorks, Inc.
+Copyright 2022-2025 The MathWorks, Inc.
