@@ -21,7 +21,9 @@ MTHVDC system have more than two converter stations interconnected by DC lines, 
 This figure shows the MTHVDC model for offshore wind integration.
 
 ![](Pictures/HVDCModelGFM.png)
-You can investigate the performance of various types of controlllers for the HVDC stations including grid forming (GFM) controls. Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
+
+You can investigate the performance of various types of controlllers for the HVDC stations including grid forming (GFM) controls. 
+Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
 performance under various dynamic scenario, like, faults, large variation in renewable power, grid outage, etc.
 
 ## Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
