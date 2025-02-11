@@ -21,7 +21,6 @@ This figure shows the MTHVDC model for offshore wind integration.
 You can investigate the performance of various types of controlllers for the HVDC stations including grid forming (GFM) controls. Use the tools provided in this project to design a MTHVDC system, connect them to offshore renewable sources and evaluate their 
 performance under various dynamic scenario, like, faults, large variation in renewable power, grid outage, etc.
 
-![](Pictures/BESSLoadchange.PNG)
 ## Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farms
 This project evaluates the capabilities of a grid-forming (GFM) controller of type-4 wind turbine generators in maintaining a stable power system operation with high inverter-based renewable energy sources penetration. 
 
@@ -75,7 +74,6 @@ These figures show the control schemes for the BESS controllers.
 
 ![](Pictures/BESSGFL&GFM.PNG)
 
-These figures show that the BESS with GFM control responds to an increase in load and delivers the real and reactive power required to maintain stable system operation.
 
 ## Setup
 - Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
