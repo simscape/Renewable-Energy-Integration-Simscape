@@ -5,10 +5,10 @@ This repository provides design solutions for the operation of power systems wit
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Renewable-Energy-Integration-Simscape)
 
 # This repository includes the following design solutions
-### 1. Evaluate Performance of MTHVDC System with GFM Control for Offshore Wind Integration.
-### 2. Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farm.
-### 3. Assess the Stability of Inverter-Based Resources using Admittance Scan Technique.
-### 4. Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants.
+### 1. [Evaluate Performance of MTHVDC System with GFM Control for Offshore Wind Integration.](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1739254663%2Ffiles%2FScriptsData%2FHVDC%2FMTHVDCModelDescription.mlx&embed=web)
+### 2. [Evaluate Performance of Grid Forming Controls for Type 4 Wind Generators in Wind Farm.](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1739254828%2Ffiles%2FScriptsData%2FWind%20Model%2FMWWindFarmwithGridformingControls.mlx&embed=web)
+### 3. [Assess the Stability of Inverter-Based Resources using Admittance Scan Technique.](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1739254828%2Ffiles%2FScriptsData%2FAdmittance%20Scan%2FAdmittanceScanofIBRsDescription.mlx&embed=web)
+### 4. [Performance Evaluation of Grid Forming Battery Energy Storage Systems in Solar PV Plants.](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1739254828%2Ffiles%2FScriptsData%2FPVPlant%2FBatteryStoragePVPlantGFMMainPage.mlx&embed=web)
 
 # Overview
 
