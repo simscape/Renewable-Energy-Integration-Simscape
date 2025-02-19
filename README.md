@@ -48,9 +48,9 @@ This repository provides engineering solutions for the operation of power system
 
 <table>
   <tr>
-    <td class="image-column" width=700><img src="Pictures/Admiscanmodel.png" alt="Model"></td>
+    <td class="image-column" width=200><img src="Pictures/Admiscanmodel.png" alt="Model"></td>
     <td class="image-column" width=50></td>
-    <td class="text-column" width=300> Using this model you can assess the oscillatory instability of the grid connected renewable plant using admittance/ impedance scanning technique, where the effective admittance/ impedance of the renewable plant and the grid are estimated over a range of different frequencies.</td>
+    <td class="text-column" width=400> Using this model you can assess the oscillatory instability of the grid connected renewable plant using admittance/ impedance scanning technique, where the effective admittance/ impedance of the renewable plant and the grid are estimated over a range of different frequencies.</td>
   </tr>
 </table>
 
