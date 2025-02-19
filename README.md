@@ -15,7 +15,9 @@ This repository provides engineering solutions for the operation of power system
 <table>
   <tr>
     <td class="image-column" width=700><img src="Pictures/SystemModel.png" alt="PV Plant with BESS"></td>
+    <td class="image-column" width=50></td>
     <td class="image-column" width=500><img src="Pictures/BESSGFL&GFM.PNG" alt="BESS GFL vs GFM"></td>
+    <td class="image-column" width=50></td>
     <td class="text-column" width=300>This project evaluates the capabilities of a grid-forming (GFM) battery energy storage system (BESS) in maintaining a stable power system with high penetration of solar photovoltaic (PV) energy sources. 
     Use this model to test and verify if the PV plant and BESS unit can perform as required by the IEEE 2800 standards.</td>
   </tr>
