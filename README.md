@@ -39,7 +39,10 @@ This repository provides engineering solutions for the operation of power system
   <tr>
     <td class="image-column" width=300><img src="Pictures/Scanadmi.png" alt="plot"></td>
     <td class="image-column" width=50></td>
-    <td class="text-column" width=400>This project investigates the use of admittance scanning to detect oscillatory instability in power networks with a high presence of IBRs. Use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.</td>
+    <td class="text-column" width=400>
+      
+      
+      This project investigates the use of admittance scanning to detect oscillatory instability in power networks with a high presence of IBRs. Use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.</td>
   </tr>
   </table>
 
