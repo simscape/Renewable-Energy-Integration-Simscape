@@ -37,9 +37,7 @@ This repository provides engineering solutions for the operation of power system
 ## Assess the Stability of Inverter-Based Resources (IBRs) using Admittance Scan Technique
 <table>
   <tr>
-    <td class="image-column" width=700><img src="Pictures/AdmiP1.png" alt="Scan"></td>
-    <td class="image-column" width=50></td>
-    <td class="image-column" width=400><img src="Pictures/Scanadmi.png" alt="plot"></td>
+    <td class="image-column" width=300><img src="Pictures/Scanadmi.png" alt="plot"></td>
     <td class="image-column" width=50></td>
     <td class="text-column" width=400>This project investigates the use of admittance scanning to detect oscillatory instability in power networks with a high presence of IBRs. Use this admittance scan block to obtain the admittance spectrum of grid connected IBRs.</td>
   </tr>
@@ -48,7 +46,7 @@ This repository provides engineering solutions for the operation of power system
 
 <table>
   <tr>
-    <td class="image-column" width=700><img src="Pictures/Admiscanmodel.png" alt="Model"></td>
+    <td class="image-column" width=800><img src="Pictures/Admiscanmodel.png" alt="Model"></td>
     <td class="image-column" width=50></td>
     <td class="text-column" width=400> Using this model you can assess the oscillatory instability of the grid connected renewable plant using admittance/ impedance scanning technique, where the effective admittance/ impedance of the renewable plant and the grid are estimated over a range of different frequencies.</td>
   </tr>
