@@ -60,9 +60,4 @@ This repository provides engineering solutions for the operation of power system
 - In the toolstrip, use the project shortcut buttons to load the model.
 - This project requires MATLAB&reg; R2024a or later.
 
-## Setup
-- Clone the repository and add to MATLAB&reg; path, then click the 'RenewableEnergyIntegrationwithSimscape.prj' file to get started. 
-- In the toolstrip, use the project shortcut buttons to load the model.
-- This project requires MATLAB&reg; R2024a or later.
-
 Copyright 2022-2025 The MathWorks, Inc.
