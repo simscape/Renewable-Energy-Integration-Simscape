@@ -103,7 +103,7 @@ jobs:
             Simscape_Electrical
             Control_System_Toolbox
             System_Identification_Toolbox
-
+            Simulink_Control_Design
 
       - name: Admittance Scan unit tests
         uses: matlab-actions/run-command@v2
