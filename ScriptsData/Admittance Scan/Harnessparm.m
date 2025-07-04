@@ -27,6 +27,7 @@ base.z=(base.kV)^2/base.mVA; % Base Impedance in Ohms
 %%Chose Resource to test
 Choice=1; % Test for RLC load
 %% Parameters for GFL BESS
+SimulationTime = scan.end +0.1;
 BatteryStoragePVPlantGFMParameters;
 %% Simulation Time Step
 Ts=5e-5; % Sample Time in sec

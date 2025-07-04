@@ -26,7 +26,7 @@ classdef BatteryStoragePVPlantGFMControlUnitTest < matlab.unittest.TestCase
     end
 
     methods (Test)
-        function SolarGFMControl_Test_1(testCase)
+        function SolarGFMControlModelTest(testCase)
             %BatteryStoragePVPlantGFMParameters
             load_system(testCase.modelname)
             testCase.addTeardown(@()close_system(testCase.modelname, 0));
@@ -34,10 +34,7 @@ classdef BatteryStoragePVPlantGFMControlUnitTest < matlab.unittest.TestCase
             sim(testCase.modelname)
         end
 
-        function SolarGFMControl_Test_2(testCase)
-            load_system(testCase.modelname)
-            testCase.addTeardown(@()close_system(testCase.modelname, 0));
-            set_param(testCase.modelname,StopTime = "0.5")
+        function SolarGFMControlMlxTest(~)
             BatteryStoragePVPlantGFMMainPage
         end
     end % methods (Test)

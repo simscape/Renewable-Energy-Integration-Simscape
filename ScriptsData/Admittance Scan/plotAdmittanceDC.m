@@ -1,7 +1,7 @@
 function plotAdmittanceDC(sysDC,f)
 h1=bodeplot(sysDC,{f(1)*2*pi,f(end)*2*pi}); % Bode plot
 setoptions(h1,'FreqUnits','Hz','grid','on','PhaseWrapping','off');
-legend('Y_DC','Location','best');
+legend('Y_{DC}','Location','best');
 title('DC Admittances');
 figure;
 subplot(2,1,1)

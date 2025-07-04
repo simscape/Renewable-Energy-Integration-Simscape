@@ -9,5 +9,5 @@ ExternalTests:
     tags:
         - long-jobs
     script:
-    - echo "*** Running tests in R2024a ***"
-    - mw -using BR2024ad matlab -batch "openProject('RenewableEnergyIntegrationSimscape.prj'); UnitTestrunnerPVPlantBESSGFMControl;UnitTestrunnerWindFarmGFMControl;UnitTestrunnerAdmittanceSCANPRBS;UnitTestrunnerMTHVDC;"
+    - echo "*** Running tests in R2024b ***"
+    - mw -using BR2024bd matlab -batch "openProject('RenewableEnergyIntegrationSimscape.prj'); UnitTestrunnerPVPlantBESSGFMControl;UnitTestrunnerWindFarmGFMControl;UnitTestrunnerAdmittanceSCANPRBS;UnitTestrunnerMTHVDC;"
