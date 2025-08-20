@@ -89,6 +89,4 @@ Clone the repository and open the MATLAB project:
 
 ```bash
 git clone https://github.com/simscape/Renewable-Energy-Integration-Simscape.git
-cd Renewable-Energy-Integration-Simscape
-open Project.prj
 
