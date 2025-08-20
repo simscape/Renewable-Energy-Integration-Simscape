@@ -132,7 +132,7 @@ jobs:
         with:
           command: openProject(pwd); UnitTestrunnerMTHVDC;
 
-  job-HVDC-MT-project-unit-tests:
+  job-HVDC-Scan-project-unit-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -149,7 +149,7 @@ jobs:
             Control_System_Toolbox
             System_Identification_Toolbox
 
-      - name: MTHVDC unit tests
+      - name: HVDC Scan unit tests
         uses: matlab-actions/run-command@v2
         with:
           command: openProject(pwd); UnitTestrunnerAdmittanceSCANHVDC;
