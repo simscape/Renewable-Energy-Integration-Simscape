@@ -31,22 +31,26 @@ grid.H=0.4;               % Grid generator inertia in (sec)
 grid.pRef=0.5;            % Grid generator real power reference 
 grid.sensorTime=8e-5;     % Speed sensor tim delay in (sec)
 %% Parameters of Wind Turbine
-load('wind_turbine_Cp.mat')                 % Loading wind turbine power coefficient table
-load('wind_MPPT.mat')                       % Loading MPPT characteristics -power/omega vs wind speed                                                        
-load('wind_derating.mat')                   % Loading derating table - wind speed vs pitch angle
+% Configure Wind Turbine Characteristics Parameters
+load mpptPower1.mat; 
+load power21.mat; 
+load mpptOmega1.mat;
+load mpptWindSpeed1.mat;
+load wind_turbine_Cp.mat;
+turbineRPMv = 1:20; % Sweep turbine power over this rotor speed (rpm)
 % Rotor hub parameters
-windTurbine.turbineRadius               = 83;                        % (m) Turbine radius
+windTurbine.turbineRadius               = 70;                        % (m) Turbine radius
 windTurbine.inertia                     = 3.2e8;                     % Inertia in kgm^2
 windTurbine.airDensity                  = 1.225;                     % (kg/m^3) Air density
 windTurbine.vWindThreshold              = 0.01;                      % (m/s) Threshold wind velocity to avoid divison by zero in Tip Speed Ratio calculation
 windTurbine.wThreshold                  = 0.01;                      % (rad/s) Threshold wind turbine velocity for numerical convergence
 windTurbine.cpBraking                   = -0.001;                    % Power coefficient for aerodynamic braking
-windTurbine.turbineRatedPower           = 12.5;                       % Power turbine rated power
+windTurbine.turbineRatedPower           = max(mpptPower);                       % Power turbine rated power
 % Turbine state machine parameters
 windTurbine.vWindCutInLower             = 4;                            % (m/s) Cut in lower wind speed
 windTurbine.vWindCutOut                 = 23;                           % (m/s) Cut out wind speed
 windTurbine.vWindCutInUpper             = 0.9*windTurbine.vWindCutOut;  % (m/s) Cut in upper wind speed
-windTurbine.vWindRated                  = 12;                           % (m/s) Rated wind speed
+windTurbine.vWindRated                  = 11;                           % (m/s) Rated wind speed
 % Extending power coefficient table in aerodynamic pitch brake region
 windTurbine.numTSR                      = size(cp,2);                % Estimating size of power coefficient table
 windTurbine.pitch                       = [pitch,90,95];             % (deg) Extending pitch angle vector to brake region
@@ -94,8 +98,8 @@ gGFM.qref=0.01;     %GFM reactive power reference
 gGFM.kq=0.3;        %GFM reactive power droop cofficient
 gGFM.vref=1.0;     %GFM voltage reference
 gGFM.fref=60;       %GFM frequency reference
-gGFM.Imax=0.4;      %Current limit
-gGFM.x_vir=3e-1;    %Virtual reactance
+gGFM.Imax=0.45;      %Current limit
+gGFM.x_vir=2e-1;    %Virtual reactance
 gGFM.r_vir=5e-2;  %Virtual resistance
 %% GFM MSC (M-GFM)
 mGFM.d=0.7;        %GFM damping cofficient
@@ -153,8 +157,8 @@ gridCode="IEEE 2800"; %Default grid code for tests
 pll.kp=100;  %Proportional PLL gain
 pll.ki=2000; %Integral PLL gain
 WindControl=1; %Choose Grid Model 1 for grid forming G-GFM and 2 for M-GFM control
-WindVSMControlDClink=Simulink.Variant(' WindControl == 1 ');
-WindVSMControlTurbineInertia =Simulink.Variant(' WindControl == 2 ');
+WindVSMControlDClink=Simulink.VariantExpression(' WindControl == 1 ');
+WindVSMControlTurbineInertia =Simulink.VariantExpression(' WindControl == 2 ');
 %% Standard Compliance Table
 TableIII=readtable('BatteryStoragePVPlantGFMTableComplianceIEEEStd.xlsx','VariableNamingRule', 'preserve');
 TableIII.('Satisfied'){1}= char(hex2dec('2713'));
