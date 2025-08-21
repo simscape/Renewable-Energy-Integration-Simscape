@@ -28,7 +28,7 @@ This repository provides **Simscape-based workflows** for modeling, simulation, 
 - Study of **high IBR penetration** and grid stability  
 - Comparison of **grid-forming (GFM) vs. grid-following (GFL)** controls  
 - Evaluation of compliance with **IEEE 2800, IRE, and national codes**  
-- Assessment of **fault ride-through (FRT), frequency/voltage support, GFM for Off shore wind with HVDC**  
+- Assessment of **fault ride-through (FRT), frequency/voltage support, GFM control for Off shore wind with HVDC**  
 - **Impedance/admittance scanning** for oscillation and stability studies  
 
 ---
