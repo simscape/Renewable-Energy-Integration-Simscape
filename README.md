@@ -9,22 +9,22 @@ Simscape-based engineering solutions for power systems with high renewable energ
 ## 📖 Table of Contents  
   
 **Engineering Solutions**
-
   - [Grid-Forming BESS in Solar PV Plants](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FPVPlant%2FBatteryStoragePVPlantGFMMainPage.mlx&embed=web)  
   - [Grid-Forming Controls for Type-4 Wind Generators](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FWind%20Model%2FMWWindFarmwithGridformingControls.mlx&embed=web)  
   - [Stability Assessment of Inverter-Based Resources](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FAdmittance%20Scan%2FAdmittanceScanofIBRsDescription.mlx&embed=web)  
   - [Multi-Terminal HVDC Systems for Offshore Wind](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FHVDC%2FMultiTerminalHVDC%2FMTHVDCModelDescription.mlx&embed=web)  
   - [Admittance-Based Stability of HVDC Links](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FHVDC%2FScanOfVSCHVDC%2FVSCHVDCScanandStabilityAnalysis.mlx&embed=web)   
-
+**Prerequisites**
+**Setup**
 ---
 
 ## 🌍 Overview  
 
-This repository provides **Simscape-based workflows** for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
+This repository provides Simscape-based workflows for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
 
 - Study of **high IBR penetration** and grid stability  
 - Comparison of **grid-forming (GFM) vs. grid-following (GFL)** controls  
-- Evaluation of compliance with **IEEE 2800, IRE, and national codes**  
+- Evaluation of compliance with **IEEE 2800, IRE, and national grid codes**  
 - Assessment of **fault ride-through (FRT), frequency/voltage support, GFM control for Off shore wind with HVDC**  
 - **Impedance/admittance scanning** for oscillation and stability studies  
 
