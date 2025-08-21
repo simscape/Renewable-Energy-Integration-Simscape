@@ -1,6 +1,6 @@
 # Renewable Energy Integration Design with Simscape  
 
-*Simscape-based engineering solutions for power systems with high renewable energy integration, compliant with IEEE/IEC standards and national grid codes.*  
+Simscape-based engineering solutions for power systems with high renewable energy integration, compliant with IEEE/IEC standards and national grid codes.  
 
 [![View ​Renewable Energy Integration Design with Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/123870-renewable-energy-integration-design-with-simscape)
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Renewable-Energy-Integration-Simscape)
@@ -28,7 +28,7 @@ This repository provides **Simscape-based workflows** for modeling, simulation, 
 - Study of **high IBR penetration** and grid stability  
 - Comparison of **grid-forming (GFM) vs. grid-following (GFL)** controls  
 - Evaluation of compliance with **IEEE 2800, IRE, and national codes**  
-- Assessment of **fault ride-through (FRT), frequency/voltage support, and Off shore wind with HVDC**  
+- Assessment of **fault ride-through (FRT), frequency/voltage support, GFM for Off shore wind with HVDC**  
 - **Impedance/admittance scanning** for oscillation and stability studies  
 
 ---
@@ -63,7 +63,7 @@ This repository provides **Simscape-based workflows** for modeling, simulation, 
 
 | ![MTHVDC Model](Pictures/HVDCModelGFM.png) |  
 |---------------------------------------------|  
-| **Description:** Models **multi-terminal VSC-HVDC systems** for offshore wind integration. Tested under **grid faults, asynchronous operation, and black-start scenarios**. |  
+| **Description:** Models **multi-terminal VSC-HVDC systems** for offshore wind integration. Tested under **grid faults, asynchronous operation, and variation in grid strength**. |  
 
 ---
 
