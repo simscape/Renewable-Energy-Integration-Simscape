@@ -7,17 +7,14 @@ Simscape-based engineering solutions for power systems with high renewable energ
 ---
 
 ## 📖 Table of Contents  
+  
+- Engineering Solutions
 
-- [Overview](#overview)  
-- [Engineering Solutions] 
   - [Grid-Forming BESS in Solar PV Plants](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FPVPlant%2FBatteryStoragePVPlantGFMMainPage.mlx&embed=web)  
   - [Grid-Forming Controls for Type-4 Wind Generators](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FWind%20Model%2FMWWindFarmwithGridformingControls.mlx&embed=web)  
   - [Stability Assessment of Inverter-Based Resources](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FAdmittance%20Scan%2FAdmittanceScanofIBRsDescription.mlx&embed=web)  
   - [Multi-Terminal HVDC Systems for Offshore Wind](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FHVDC%2FMultiTerminalHVDC%2FMTHVDCModelDescription.mlx&embed=web)  
-  - [Admittance-Based Stability of HVDC Links](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FHVDC%2FScanOfVSCHVDC%2FVSCHVDCScanandStabilityAnalysis.mlx&embed=web)  
-- [Prerequisites]  
-- [Setup]  
-- [License]  
+  - [Admittance-Based Stability of HVDC Links](https://viewer.mathworks.com/?viewer=live_code&url=https%3A%2F%2Fwww.mathworks.com%2Fmatlabcentral%2Fmlc-downloads%2Fdownloads%2F45965b03-57ee-472e-a6cb-8bc8dd5d299a%2F1755758349%2Ffiles%2FScriptsData%2FHVDC%2FScanOfVSCHVDC%2FVSCHVDCScanandStabilityAnalysis.mlx&embed=web)   
 
 ---
 
