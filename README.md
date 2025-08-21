@@ -76,7 +76,7 @@ This repository provides **Simscape-based workflows** for modeling, simulation, 
 ## 🛠️ Prerequisites  
 
 - MATLAB® **R2024b** or later  
-- **Simscape** and **Simscape Electrical** toolboxes  
+- Simscape and Simscape Electrical toolboxes  
 
 ---
 
