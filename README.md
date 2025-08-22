@@ -23,9 +23,9 @@ Simscape-based engineering solutions for power systems with high renewable energ
 
 This repository provides Simscape-based workflows for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
 
-- Study of high IBR penetration and grid stability  
+- Study of high **inverter based resource (IBR)** penetration and grid stability  
 - Comparison of **grid-forming (GFM) vs. grid-following (GFL)** controls  
-- Evaluation of compliance with **IEEE 2800, IRE, and national grid codes**  
+- Evaluation of compliance with **IEEE 2800, IRE**, and **national grid codes**  
 - Assessment of **fault ride-through (FRT), frequency/voltage support, GFM control for Offshore wind with HVDC**  
 - **Impedance/admittance scanning** for oscillation and stability studies  
 
