@@ -21,12 +21,12 @@ Simscape-based engineering solutions for power systems with high renewable energ
 
 ## 🌍 Overview  
 
-This repository provides **Simscape-based workflows** for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
+This repository provides Simscape-based workflows for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
 
-- Study of **high IBR penetration** and grid stability  
+- Study of high IBR penetration and grid stability  
 - Comparison of **grid-forming (GFM) vs. grid-following (GFL)** controls  
-- Evaluation of compliance with **IEEE 2800, IRE, and national codes**  
-- Assessment of **fault ride-through (FRT), frequency/voltage support, GFM control for Off shore wind with HVDC**  
+- Evaluation of compliance with **IEEE 2800, IRE, and national grid codes**  
+- Assessment of **fault ride-through (FRT), frequency/voltage support, GFM control for Offshore wind with HVDC**  
 - **Impedance/admittance scanning** for oscillation and stability studies  
 
 ---
@@ -82,8 +82,5 @@ This repository provides **Simscape-based workflows** for modeling, simulation, 
 
 ## 🚀 Setup  
 
-Clone the repository and open the MATLAB project:  
-
-```bash
-git clone https://github.com/simscape/Renewable-Energy-Integration-Simscape.git
+Download the repository and open the MATLAB project.
 
