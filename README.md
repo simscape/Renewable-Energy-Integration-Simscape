@@ -1,6 +1,6 @@
 # Renewable Energy Integration Design with Simscape  
 
-Simscape-based engineering solutions for power systems with high renewable energy integration, compliant with IEEE/IEC standards and national grid codes.  
+Engineering solutions for power systems with high renewable energy integration, compliant with IEEE/IEC standards and national grid codes.  
 
 [![View ​Renewable Energy Integration Design with Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/123870-renewable-energy-integration-design-with-simscape)
 [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Renewable-Energy-Integration-Simscape)
@@ -21,7 +21,7 @@ Simscape-based engineering solutions for power systems with high renewable energ
 
 ## 🌍 Overview  
 
-This repository provides Simscape-based workflows for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
+This repository provides workflows for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
 
 - Study of high **inverter based resource (IBR)** penetration and grid stability  
 - Comparison of **grid-forming (GFM) vs. grid-following (GFL)** controls  
@@ -76,7 +76,7 @@ This repository provides Simscape-based workflows for modeling, simulation, and 
 ## 🛠️ Prerequisites  
 
 - MATLAB® **R2024b** or later  
-- Simscape and Simscape Electrical toolboxes  
+- Simscape™  and Simscape™  Electrical toolboxes  
 
 ---
 
