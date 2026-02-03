@@ -2,7 +2,7 @@
 % This script runs tests for component-level and system-level tests.
 % Note that tests for detailed model applications are not run
 % to avoid long-running tests.
-% Copyright 2024 The MathWorks, Inc.
+% Copyright 2025 The MathWorks, Inc.
 relStr = matlabRelease().Release;
 disp("This is MATLAB " + relStr + ".")
 topFolder = currentProject().RootFolder;
