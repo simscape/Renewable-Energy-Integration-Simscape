@@ -5,9 +5,9 @@ SimulationTime = 40; % Time is (s)
 BatteryStoragePVPlantGFMParameters;% PV and Battery plant parameters
 GridModel = 2; % Grid model selection
 BESSControl = 1; %Choose Grid Model 1 for grid forming VSM and 2 for Grid following V and F supporting control
-GFMBatteryController.voltagref = 1.0; % Voltage reference of GFM
-GFMBatteryController.voltagedroop =1.05; % Reactive power Voltage droop
-droop = 2 ; % Choose 1 for BESS GFM control using droop and 2 for VSM
+GFMBatteryController.voltagref = 1.02; % Voltage reference of GFM
+GFMBatteryController.voltagedroop = 1.01; % Reactive power Voltage droop
+droop = 1 ; % Choose 1 for BESS GFM control using droop and 2 for VSM
 % 1 - Synchronous Machine based ideal source (used for classical stability studies)
 % 2 - Frequency-controlled three-phase voltage source (used for modern dynamic tests)
 % For testing renewable energy sources (e.g., solar, wind, BESS), 

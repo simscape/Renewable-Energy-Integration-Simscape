@@ -10,8 +10,8 @@ Engineering solutions for power systems with high renewable energy integration, 
 
 - Overview  
 - Engineering Solutions
-  - [Grid-Forming BESS in Solar PV Plants]()  
-  - [Grid-Code Compliance Check for Solar PV and BESS Plant](https://viewer.mathworks.com/addons/123870/25.1.1.1/files/ScriptsData/GridCodeUtils/reportOfGridCodeTest.mlx) 
+  - [Grid-Forming BESS in Solar PV Plants](https://viewer.mathworks.com/addons/123870/25.1.1.1/files/ScriptsData/PVPlant/BatteryStoragePVPlantGFMMainPage.mlx)  
+  - [Check Grid-Code Compliance for a Renewable Plant](https://viewer.mathworks.com/addons/123870/25.1.1.1/files/ScriptsData/GridCodeUtils/reportOfGridCodeTest.mlx) 
   - [Grid-Forming Controls for Type-4 Wind Generators](https://viewer.mathworks.com/addons/123870/25.1.1.1/files/ScriptsData/Wind%20Model/MWWindFarmwithGridformingControls.mlx) 
   - [Stability Assessment of Inverter-Based Resources](https://viewer.mathworks.com/addons/123870/25.1.1.1/files/ScriptsData/Admittance%20Scan/AdmittanceScanofIBRsDescription.mlx)
   - [Multi-Terminal HVDC Systems for Offshore Wind](https://viewer.mathworks.com/addons/123870/25.1.1.1/files/ScriptsData/HVDC/MultiTerminalHVDC/MTHVDCModelDescription.mlx) 
