@@ -78,7 +78,7 @@ This repository provides workflows for modeling, simulation, and stability asses
 
 | ![BlackStart Model](Pictures/Blackstart.png) |  
 |-------------------------------------------|  
-| **Description:** Demonstrates **black start process using HVDC offshore wind system** of a **two-terminal MMC-VSC-HVDC system** linking offshore wind farms to the grid. | 
+| **Description:** Demonstrates the **black start process using offshore wind farms** connected through a **two-terminal MMC-VSC-HVDC system** linking offshore wind farms to the grid. | 
 
 ---
 
