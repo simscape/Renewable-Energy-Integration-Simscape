@@ -47,7 +47,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025a
+          release: R2025b
           cache: true
           products: |
             Simulink
@@ -72,7 +72,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025a
+          release: R2025b
           cache: true
           products: |
             Simulink
@@ -95,7 +95,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025a
+          release: R2025b
           cache: true
           products: |
             Simulink
@@ -118,7 +118,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025a
+          release: R2025b
           cache: true
           products: |
             Simulink
@@ -140,7 +140,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025a
+          release: R2025b
           cache: true
           products: |
             Simulink
@@ -163,7 +163,7 @@ jobs:
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          release: R2025a
+          release: R2025b
           cache: true
           products: |
             Simulink
@@ -174,3 +174,24 @@ jobs:
         uses: matlab-actions/run-command@v2
         with:
           command: openProject(pwd); UnitTestRunnerGridCode;
+
+  job-HVDC-Blackstart-project-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v2
+        with:
+          release: R2025b
+          cache: true
+          products: |
+            Simulink
+            Simscape
+            Simscape_Electrical
+
+      - name: Black Start Unit Test
+        uses: matlab-actions/run-command@v2
+        with:
+          command: openProject(pwd); VSCHVDCunitblackstartWorkflowTest;
+          
