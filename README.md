@@ -74,7 +74,7 @@ This repository provides workflows for modeling, simulation, and stability asses
 
 ---
 
-### Black Starting using Offshore Wind and MCC-HVDC  
+### Black Starting using Offshore Wind and MMC-HVDC  
 
 | ![BlackStart Model](Pictures/Blackstart.png) |  
 |-------------------------------------------|  
