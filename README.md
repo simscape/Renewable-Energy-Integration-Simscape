@@ -15,11 +15,11 @@ Engineering solutions for power systems with high renewable energy integration, 
   - [Grid-Forming Controls for Type-4 Wind Generators](https://viewer.mathworks.com/addons/123870/25.1.1.2/files/ScriptsData/Wind%20Model/MWWindFarmwithGridformingControls.mlx) 
   - [Stability Assessment of Inverter-Based Resources](https://viewer.mathworks.com/addons/123870/25.1.1.2/files/ScriptsData/Admittance%20Scan/AdmittanceScanofIBRsDescription.mlx)
   - [Multi-Terminal HVDC Systems for Offshore Wind](https://viewer.mathworks.com/addons/123870/25.1.1.2/files/ScriptsData/HVDC/MultiTerminalHVDC/MTHVDCModelDescription.mlx) 
-  - [Admittance-Based Stability of HVDC Links](https://viewer.mathworks.com/addons/123870/25.1.1.2/files/ScriptsData/HVDC/ScanOfVSCHVDC/VSCHVDCScanandStabilityAnalysis.mlx) 
+  - [Admittance-Based Stability of HVDC Links](https://viewer.mathworks.com/addons/123870/25.1.1.2/files/ScriptsData/HVDC/ScanOfVSCHVDC/VSCHVDCScanandStabilityAnalysis.m)
+  - [Black Start of Offshore Wind with HVDC](https://viewer.mathworks.com/addons/123870/25.1.1.2/files/ScriptsData/HVDC/BlackStart/Blackstart.m)  
 - Prerequisites
 - Setup
 ---
-
 ## 🌍 Overview  
 
 This repository provides workflows for modeling, simulation, and stability assessment of renewable energy systems. It enables:  
@@ -74,9 +74,17 @@ This repository provides workflows for modeling, simulation, and stability asses
 
 ---
 
+### Admittance-Based Stability of HVDC Links  
+
+| ![BlackStart Model](Pictures/Blackstart.png) |  
+|-------------------------------------------|  
+| **Description:** Demonstrates **black start process using HVDC offshore wind system** of a **two-terminal MMC-VSC-HVDC system** linking offshore wind farms to the grid. | 
+
+---
+
 ## 🛠️ Prerequisites  
 
-- MATLAB® **R2025a** or later  
+- MATLAB® **R2025b** or later  
 - Simscape™  and Simscape™  Electrical toolboxes  
 
 ---
