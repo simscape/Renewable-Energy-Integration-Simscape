@@ -74,7 +74,7 @@ This repository provides workflows for modeling, simulation, and stability asses
 
 ---
 
-### Admittance-Based Stability of HVDC Links  
+### Black Starting using Offshore Wind and MCC-HVDC  
 
 | ![BlackStart Model](Pictures/Blackstart.png) |  
 |-------------------------------------------|  
