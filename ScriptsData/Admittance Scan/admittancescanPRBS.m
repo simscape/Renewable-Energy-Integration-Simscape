@@ -2,7 +2,7 @@ function sys = admittancescanPRBS(Vd,Vq,Vdc,f,data,o,plot)
 %% This function estimates the admittance as transfer functions between Id vs Vd, Id vs Vq, Iq vs Vd, Id vs Vd
 %using transfer function estimation function available in control system
 %tool box.
-
+% Copyright 2025 - 2026 The MathWorks, Inc.
 arguments
     Vd  {mustBeGreaterThanOrEqual(Vd,0)} % Should be the amplitude of D axis disturbance in PU
     Vq  {mustBeGreaterThanOrEqual(Vq,0)} % Should be the amplitude of Q axis disturbance in PU

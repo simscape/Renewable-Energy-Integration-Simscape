@@ -1,5 +1,6 @@
 %% Simulation Parameters
 % This file sets the parameters for all the blocks and variables used in the simulation model
+% Copyright 2025 - 2026 The MathWorks, Inc.
 %% Renewable plant parameters
 BatteryStoragePVPlantGFMParameters;% PV and Battery plant parameters
 WindFarmGFMControlParameters;% Wind plant parameters

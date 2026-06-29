@@ -1,4 +1,5 @@
 %% Test Harness parameters
+% Copyright 2025 - 2026 The MathWorks, Inc.
 %% Grid Parameters
 grid.voltage=4.16e3; % Actual supply L-L voltage used for simulating the system,
 grid.frequency=60;   % Supply frequency in Hz
@@ -15,6 +16,7 @@ scan.start=1.5;% time to start frequency scan
 scan.samplingfrequency=5e3;% Sampling frequency of frequency scan
 scan.Vd=0.01;% Disturbance voltage magnitude in PU
 scan.Vq=0.0;% Disturbance voltage magnitude in PU
+scan.Vdc=0.0;% Disturbance voltage magnitude in PU
 scan.f=[1:1e4]/(2*pi); % Range of disturbance frequency in Hz
 modelorder=4; % Model order to obtain a reduced ordered admittance model of the system
 %% PLL Parameters

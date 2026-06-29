@@ -2,7 +2,7 @@ classdef AdmittanceScanner
     % AdmittanceScanner estimates small-signal admittance transfer functions
     % for three-phase power systems using simulation data.
     % Supports scanning for both AC and DC domains, with integrated plotting.
-
+    % Copyright 2025 - 2026 The MathWorks, Inc.
     properties
         % Configuration structure with required fields: voltage disturbances along D-axis: Vd (PU), 
         % voltage disturbances along Q-axis: voltage disturbances Vq (PU), along DC-side: Vdc (PU), 

@@ -5,8 +5,9 @@ Ljw = freqresp(L1, w);  % size: 2x2xN
 
 % Compute det(I + L(jw)) manually at each frequency
 detL = zeros(1, length(w));
-
-
+for k = 1:length(w)
+    detL(k) = det(eye(size(Ljw,1)) + Ljw(:,:,k));
+end
 
 % Plot the determinant trajectory
 figure;
@@ -23,7 +24,7 @@ closest_point = detL(idx); % Value of det(I + L(jω)) at closest point
 plot(real(closest_point), imag(closest_point), 'o', ...
      'MarkerSize', 6, 'MarkerEdgeColor', 'g', 'MarkerFaceColor', 'none');
 text(real(closest_point), imag(closest_point), ...
-     ['  ', sprintf('%.1f Hz', closest_freq, min_dist)], ...
+     ['  ', sprintf('%.1f Hz, d=%.3f', closest_freq, min_dist)], ...
      'Color', 'g', 'FontSize', 8);
 
 xlabel('Re'); ylabel('Im'); grid on; axis equal;

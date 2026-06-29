@@ -1,15 +1,24 @@
 function plotHVDC(Data,Tsim)
 %UNTITLED2 Summary of this function goes here
-PS1 = getsamples(Data.PST1,find(Data.tout==0.2):find(Data.tout==Tsim))/1e6;
-PS2 = getsamples(Data.PST2,find(Data.tout==0.2):find(Data.tout==Tsim))/1e6;
-PS3 = getsamples(Data.PST3,find(Data.tout==0.2):find(Data.tout==Tsim))/1e6;
-PS4 = getsamples(Data.PST4,find(Data.tout==0.2):find(Data.tout==Tsim))/1e6;
-PS5 = getsamples(Data.PST5,find(Data.tout==0.2):find(Data.tout==Tsim))/1e6;
-PS6 = getsamples(Data.PST6,find(Data.tout==0.2):find(Data.tout==Tsim))/1e6;
-V1 = getsamples(Data.Vabc,find(Data.tout==0.2):find(Data.tout==Tsim));
-I1 = getsamples(Data.Iabc,find(Data.tout==0.2):find(Data.tout==Tsim));
-V = getsamples(Data.Vmag,find(Data.tout==0.2):find(Data.tout==Tsim));
-F = getsamples(Data.f,find(Data.tout==0.2):find(Data.tout==Tsim));
+Tsim = min(Tsim, Data.tout(end));
+iStart = find(Data.tout >= 0.2, 1, 'first');
+iEnd = find(Data.tout <= Tsim, 1, 'last');
+nTs = length(Data.PST1.Time);
+iEnd = min(iEnd, nTs);
+nPoints = iEnd - iStart + 1;
+maxPoints = 2000;
+step = max(1, floor(nPoints / maxPoints));
+idx = iStart:step:iEnd;
+PS1 = getsamples(Data.PST1,idx)/1e6;
+PS2 = getsamples(Data.PST2,idx)/1e6;
+PS3 = getsamples(Data.PST3,idx)/1e6;
+PS4 = getsamples(Data.PST4,idx)/1e6;
+PS5 = getsamples(Data.PST5,idx)/1e6;
+PS6 = getsamples(Data.PST6,idx)/1e6;
+V1 = getsamples(Data.Vabc,idx);
+I1 = getsamples(Data.Iabc,idx);
+V = getsamples(Data.Vmag,idx);
+F = getsamples(Data.f,idx);
 aboveLinev = (V.Data>1.1 | V.Data<0.9);
 % Create 2 copies of v
 bottomLinev = V.Data;
@@ -50,8 +59,8 @@ title('Real Power From Offshore Stations')
 subplot(2,2,3)
 plot(V.Time,bottomLinev,V.time,topLinev);
 hold on;
-plot(Data.tout,1.1*ones(size(Data.tout)),'--g');
-plot(Data.tout,0.9*ones(size(Data.tout)),'--g');
+plot([0.5 Tsim],[1.1 1.1],'--g');
+plot([0.5 Tsim],[0.9 0.9],'--g');
 xlim([0.5 Tsim]);
 xlabel('Time (sec)');
 ylabel('PU');
@@ -66,8 +75,8 @@ title('Volatge Magnitude at Onshore Station 1')
 subplot(2,2,4)
 plot(F.Time,bottomLinef,F.time,topLinef);
 hold on;
-plot(Data.tout,61.2*ones(size(Data.tout)),'--g');
-plot(Data.tout,58.8*ones(size(Data.tout)),'--g');
+plot([0.5 Tsim],[61.2 61.2],'--g');
+plot([0.5 Tsim],[58.8 58.8],'--g');
 xlim([0.5 Tsim]);
 xlabel('Time (sec)');
 ylabel('Hz');
