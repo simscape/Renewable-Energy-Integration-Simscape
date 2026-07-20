@@ -128,6 +128,20 @@
         th { background: #f5f5f5; font-weight: 600; }
 
         .footer-note { margin-top: 30px; padding-top: 12px; border-top: 1px solid #e0e0e0; font-size: 11px; color: #555; }
+    \n\n
+        /* MATLAB command dialog */
+        .matlab-cmd-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.4); z-index:9999; align-items:center; justify-content:center; }
+        .matlab-cmd-overlay.show { display:flex; }
+        .matlab-cmd-dialog { background:#fff; border-radius:8px; padding:24px; max-width:500px; width:90%; box-shadow:0 4px 24px rgba(0,0,0,0.2); }
+        .matlab-cmd-dialog h3 { margin:0 0 12px; font-size:14px; color:#212121; }
+        .matlab-cmd-dialog p { margin:0 0 12px; font-size:12px; color:#555; }
+        .matlab-cmd-dialog .cmd-box { background:#f5f5f5; border:1px solid #e0e0e0; border-radius:4px; padding:10px 14px; font-family:"Courier New",monospace; font-size:12px; margin:12px 0; word-break:break-all; }
+        .matlab-cmd-dialog .btn-row { display:flex; gap:8px; justify-content:flex-end; margin-top:16px; }
+        .matlab-cmd-dialog button { padding:8px 16px; border-radius:4px; font-size:12px; cursor:pointer; border:none; }
+        .matlab-cmd-dialog .btn-copy { background:#0076a8; color:#fff; }
+        .matlab-cmd-dialog .btn-copy:hover { background:#005a7c; }
+        .matlab-cmd-dialog .btn-close { background:#f5f5f5; color:#333; border:1px solid #e0e0e0; }
+        .matlab-cmd-dialog .btn-close:hover { background:#e8e8e8; }
     </style>
 </head>
 <body>
@@ -178,8 +192,8 @@
     <p>Navigate to different applications in the sections below. Click on the hyperlinks provided to go to the application workflows.</p>
 
     <!-- Sub-section: Renewable Models -->
-    <h2 id="renewable-models" class="collapsible" onclick="toggle(this)">Renewable Energy Models</h2>
-    <div class="collapse-body">
+    <h2 id="renewable-models" class="collapsible open" onclick="toggle(this)">Renewable Energy Models</h2>
+    <div class="collapse-body open">
         <div class="card-grid">
             <div class="model-card">
                 <div class="card-header-bar"></div>
@@ -188,7 +202,7 @@
                     <h3>Battery Energy Storage with Grid Forming Control in PV Park</h3>
                     <p>Validates how a GFM battery energy storage system improves grid strength and reliability with high IBR penetration in solar PV applications.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('BatteryStoragePVPlantGFM')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('BatteryStoragePVPlantGFM')" data-cmd="open_system('BatteryStoragePVPlantGFM')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('BatteryStoragePVPlantGFM')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -200,7 +214,7 @@
                     <h3>Grid Forming Controls for Type 4 Wind Generators</h3>
                     <p>Evaluates GFM converter control for type-4 wind turbines in maintaining stable operation with high IBR penetration in wind farms.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('WindFarmGFMControl')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('WindFarmGFMControl')" data-cmd="open_system('WindFarmGFMControl')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('WindFarmGFMControl')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -209,8 +223,8 @@
     </div>
 
     <!-- Sub-section: Stability Analysis -->
-    <h2 id="stability-analysis" class="collapsible" onclick="toggle(this)">Stability Analysis</h2>
-    <div class="collapse-body">
+    <h2 id="stability-analysis" class="collapsible open" onclick="toggle(this)">Stability Analysis</h2>
+    <div class="collapse-body open">
         <div class="card-grid">
             <div class="model-card">
                 <div class="card-header-bar"></div>
@@ -219,7 +233,7 @@
                     <h3>Test Harness for Admittance Scan</h3>
                     <p>Obtain frequency vs admittance characteristics with admittance scan block connected to an ideal grid for IBR characterization.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('TestHarness')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('TestHarness')" data-cmd="open_system('TestHarness')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('TestHarness')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -231,7 +245,7 @@
                     <h3>Renewable Stability Assessment via Admittance Scan</h3>
                     <p>Data-driven stability assessment to determine frequency vs admittance characteristics of grid-connected renewable systems.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('AdmittanceScanPRBS')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('AdmittanceScanPRBS')" data-cmd="open_system('AdmittanceScanPRBS')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('AdmittanceScanPRBS')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -243,7 +257,7 @@
                     <h3>HVDC Stability Analysis with Offshore Wind</h3>
                     <p>Two-terminal VSC-HVDC system stability assessment connecting offshore wind farms using admittance scan methodology.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('HVDCScan')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('HVDCScan')" data-cmd="open_system('HVDCScan')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('HVDCScan')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -252,8 +266,8 @@
     </div>
 
     <!-- Sub-section: HVDC Systems -->
-    <h2 id="hvdc-systems" class="collapsible" onclick="toggle(this)">HVDC Systems for Offshore Wind Integration</h2>
-    <div class="collapse-body">
+    <h2 id="hvdc-systems" class="collapsible open" onclick="toggle(this)">HVDC Systems for Offshore Wind Integration</h2>
+    <div class="collapse-body open">
         <div class="card-grid">
             <div class="model-card">
                 <div class="card-header-bar"></div>
@@ -262,7 +276,7 @@
                     <h3>Multi-Terminal HVDC for Offshore Wind Integration</h3>
                     <p>Multi-terminal HVDC design for transporting power from multiple offshore wind farms with GFM control strategies.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('HVDCMTGW')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('HVDCMTGW')" data-cmd="open_system('HVDCMTGW')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('HVDCMTGW')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -274,7 +288,7 @@
                     <h3>Black Start of Offshore Wind Farm via VSC-HVDC with GFM</h3>
                     <p>Complete HVDC black-start sequence with grid-forming wind turbines: DC-link pre-charge, offshore P-control, onshore VSC grid-forming.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('VSCHVDCunitblackstart')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('VSCHVDCunitblackstart')" data-cmd="open_system('VSCHVDCunitblackstart')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('VSCHVDCunitblackstart')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -283,8 +297,8 @@
     </div>
 
     <!-- Sub-section: Grid Code Compliance -->
-    <h2 id="gridcode-compliance" class="collapsible" onclick="toggle(this)">Grid Code Compliance</h2>
-    <div class="collapse-body">
+    <h2 id="gridcode-compliance" class="collapsible open" onclick="toggle(this)">Grid Code Compliance</h2>
+    <div class="collapse-body open">
         <div class="card-grid">
             <div class="model-card">
                 <div class="card-header-bar"></div>
@@ -293,7 +307,7 @@
                     <h3>Automated Grid Code Compliance Checker</h3>
                     <p>Evaluate IBR plant performance against international grid standards (IEEE 2800, ENTSOE, AEMO, CEA, UK) with automated report generation including voltage/frequency limits, harmonics, LVRT/OVRT, and PQ/QV capability curves.</p>
                     <div class="card-actions">
-                        <a href="matlab:open_system('TestonBESSPVPlant')" class="btn-load btn-primary">Open Model</a>
+                        <a href="matlab:open_system('TestonBESSPVPlant')" data-cmd="open_system('TestonBESSPVPlant')" class="btn-load btn-primary">Open Model</a>
                         <button class="btn-load btn-secondary" onclick="copyCommand(this, &quot;open_system('TestonBESSPVPlant')&quot;)">Copy Command</button>
                     </div>
                 </div>
@@ -304,72 +318,72 @@
     <!-- Section: Components -->
     <h1 id="components">Components</h1>
     <p>
-        This project includes a custom Simulink library (<a href="matlab:open_system('renewableCustom_lib')">renewableCustom_lib</a>)
+        This project includes a custom Simulink library (<a href="matlab:open_system('renewableCustom_lib')" data-cmd="open_system('renewableCustom_lib')">renewableCustom_lib</a>)
         with reusable blocks for renewable energy integration workflows. Open the library browser to explore all blocks:
     </p>
     <div class="code">open_system('renewableCustom_lib')</div>
 
-    <h2 id="comp-general" class="collapsible" onclick="toggle(this)">General</h2>
-    <div class="collapse-body">
+    <h2 id="comp-general" class="collapsible open" onclick="toggle(this)">General</h2>
+    <div class="collapse-body open">
         <div class="example-grid">
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/General/Scan Block')">Scan Block</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/General/Scan Block')" data-cmd="open_system('renewableCustom_lib/General/Scan Block')">Scan Block</a></div>
                 <div class="card-desc">PRBS admittance scan instrument at the point of interconnection for IBR characterization.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/General/Measurement (Three-Phase)')">Measurement (Three-Phase)</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/General/Measurement (Three-Phase)')" data-cmd="open_system('renewableCustom_lib/General/Measurement (Three-Phase)')">Measurement (Three-Phase)</a></div>
                 <div class="card-desc">Inline three-phase measurement: voltage magnitude, frequency, active and reactive power.</div>
             </div>
         </div>
     </div>
 
-    <h2 id="comp-hvdc" class="collapsible" onclick="toggle(this)">HVDC</h2>
-    <div class="collapse-body">
+    <h2 id="comp-hvdc" class="collapsible open" onclick="toggle(this)">HVDC</h2>
+    <div class="collapse-body open">
         <div class="example-grid">
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/GFMHVDC Controller Onshore')">GFMHVDC Controller Onshore</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/GFMHVDC Controller Onshore')" data-cmd="open_system('renewableCustom_lib/HVDC/GFMHVDC Controller Onshore')">GFMHVDC Controller Onshore</a></div>
                 <div class="card-desc">Grid-forming controller for onshore HVDC station using DC-link inertia (VSM-based).</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/DC Voltage Controller')">DC Voltage Controller</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/DC Voltage Controller')" data-cmd="open_system('renewableCustom_lib/HVDC/DC Voltage Controller')">DC Voltage Controller</a></div>
                 <div class="card-desc">Regulates DC-link voltage and outputs modulation reference for VSC-HVDC systems.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/HVDC Power Controller')">HVDC Power Controller</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/HVDC Power Controller')" data-cmd="open_system('renewableCustom_lib/HVDC/HVDC Power Controller')">HVDC Power Controller</a></div>
                 <div class="card-desc">Controls active power transfer through HVDC link with droop-based dispatch.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/GFM Controller')">GFM Controller (Offshore)</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/GFM Controller')" data-cmd="open_system('renewableCustom_lib/HVDC/GFM Controller')">GFM Controller (Offshore)</a></div>
                 <div class="card-desc">Virtual synchronous machine for offshore AC voltage and frequency formation.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/HVDC Station (Bipole)')">HVDC Station (Bipole)</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/HVDC/HVDC Station (Bipole)')" data-cmd="open_system('renewableCustom_lib/HVDC/HVDC Station (Bipole)')">HVDC Station (Bipole)</a></div>
                 <div class="card-desc">Full bipolar HVDC station with MMC, transformer, and DC cables (400 kV, 400 MVA).</div>
             </div>
         </div>
     </div>
 
-    <h2 id="comp-renewable" class="collapsible" onclick="toggle(this)">Renewable Sources</h2>
-    <div class="collapse-body">
+    <h2 id="comp-renewable" class="collapsible open" onclick="toggle(this)">Renewable Sources</h2>
+    <div class="collapse-body open">
         <div class="example-grid">
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/PV Controller')">PV Controller</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/PV Controller')" data-cmd="open_system('renewableCustom_lib/Renewable Sources/PV Controller')">PV Controller</a></div>
                 <div class="card-desc">Grid-following PV controller with current limiting and LVRT support.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/Inverter')">Inverter</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/Inverter')" data-cmd="open_system('renewableCustom_lib/Renewable Sources/Inverter')">Inverter</a></div>
                 <div class="card-desc">Three-phase inverter with DC and AC terminals for PV and BESS applications.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/GFM Wind (PMSG)')">GFM Wind (PMSG)</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/GFM Wind (PMSG)')" data-cmd="open_system('renewableCustom_lib/Renewable Sources/GFM Wind (PMSG)')">GFM Wind (PMSG)</a></div>
                 <div class="card-desc">Grid-forming wind turbine with PMSG and inverter (12.5 MW, Type-4).</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/Wind GFL Mpp (PMSG)')">Wind GFL Mpp (PMSG)</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/Wind GFL Mpp (PMSG)')" data-cmd="open_system('renewableCustom_lib/Renewable Sources/Wind GFL Mpp (PMSG)')">Wind GFL Mpp (PMSG)</a></div>
                 <div class="card-desc">Grid-following wind turbine with maximum power point tracking.</div>
             </div>
             <div class="example-card">
-                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/GFL Controller')">GFL Controller</a></div>
+                <div class="card-title"><a href="matlab:open_system('renewableCustom_lib/Renewable Sources/GFL Controller')" data-cmd="open_system('renewableCustom_lib/Renewable Sources/GFL Controller')">GFL Controller</a></div>
                 <div class="card-desc">Grid-following controller with PLL, droop, and current limiting.</div>
             </div>
         </div>
@@ -408,5 +422,51 @@ function copyCommand(btn, cmd) {
     });
 }
 </script>
-    </body>
+    \n\n
+<!-- MATLAB Command Dialog -->
+<div class="matlab-cmd-overlay" id="matlabCmdOverlay" onclick="closeCmdDialog(event)">
+  <div class="matlab-cmd-dialog" onclick="event.stopPropagation()">
+    <h3>MATLAB Command</h3>
+    <p>Run this command in the MATLAB Command Window:</p>
+    <div class="cmd-box" id="matlabCmdText"></div>
+    <div class="btn-row">
+      <button class="btn-copy" onclick="copyMatlabCmd()">Copy Command</button>
+      <button class="btn-close" onclick="closeCmdDialog()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+    // On MATLAB Desktop, href="matlab:..." works natively - do nothing.
+    // On MATLAB Online, intercept and show command dialog.
+    // Detection: Desktop serves via 127.0.0.1, Online via different host.
+    var isDesktop = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
+    if (isDesktop) return;
+    
+    // Online: intercept all matlab: links
+    document.addEventListener("click", function(e) {
+        var link = e.target.closest("a[data-cmd]");
+        if (link) {
+            e.preventDefault();
+            document.getElementById("matlabCmdText").textContent = link.getAttribute("data-cmd");
+            document.getElementById("matlabCmdOverlay").classList.add("show");
+        }
+    });
+})();
+function closeCmdDialog(event) {
+    if (!event || event.target === document.getElementById("matlabCmdOverlay")) {
+        document.getElementById("matlabCmdOverlay").classList.remove("show");
+    }
+}
+function copyMatlabCmd() {
+    var cmd = document.getElementById("matlabCmdText").textContent;
+    navigator.clipboard.writeText(cmd).then(function() {
+        var btn = document.querySelector(".matlab-cmd-dialog .btn-copy");
+        btn.textContent = "Copied!";
+        setTimeout(function() { btn.textContent = "Copy Command"; }, 1500);
+    });
+}
+</script>
+</body>
 </html>
